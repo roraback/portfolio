@@ -1,6 +1,7 @@
 from django.db import models
 
 class Image(models.Model):
+    title = models.CharField(max_length=100)
     image = models.ImageField(upload_to="images", default="img/default.jpg")
     thumbnail = models.ImageField(upload_to="images", default="img/defaultThumb.jpg", blank=True, null=True)
     caption = models.TextField()
@@ -14,6 +15,7 @@ class Addendum(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
     attachment = models.FileField(upload_to="addenda", blank=True, null=True)
+    attachment_description = models.CharField(max_length=100, blank=True, null=True)
     project = models.ForeignKey('Project')
     rank = models.IntegerField()
     
