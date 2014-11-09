@@ -1,3 +1,7 @@
 from django.contrib import admin
+from projects.models import Image, Addendum, Project, Category
 
-# Register your models here.
+admin.site.register(Image)
+admin.site.register(Addendum)
+admin.site.register(Project)
+admin.site.register(Category)
