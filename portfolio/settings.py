@@ -58,6 +58,10 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+TEMPLATE_DIRS = (
+    os.path.join(BASE_DIR, 'templates'),
+)
+
 ROOT_URLCONF = 'portfolio.urls'
 
 WSGI_APPLICATION = 'portfolio.wsgi.application'
