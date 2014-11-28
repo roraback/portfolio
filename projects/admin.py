@@ -11,8 +11,13 @@ class AddendumInline(admin.TabularInline):
 
 class ProjectAdmin(admin.ModelAdmin):
     inlines = [ImageInline, AddendumInline]
+    list_display = ('title', 'category', 'rank')
+    exclude = ('slug',)
+
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ('title', 'rank')
 
 admin.site.register(Image)
 admin.site.register(Addendum)
 admin.site.register(Project, ProjectAdmin)
-admin.site.register(Category)
+admin.site.register(Category, CategoryAdmin)
