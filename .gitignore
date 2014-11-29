@@ -1,2 +1,5 @@
 *.pyc
 .sass-cache*
+
+media/projects/
+media/images/
