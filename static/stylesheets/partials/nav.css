@@ -1,0 +1,135 @@
+/* line 4, ../../sass/partials/nav.scss */
+nav a {
+  color: #ffcf00;
+  text-decoration: none;
+}
+
+/* line 8, ../../sass/partials/nav.scss */
+nav a:hover mark {
+  color: #ff80d3;
+}
+
+/* line 12, ../../sass/partials/nav.scss */
+h1 a {
+  color: #ff8f00;
+  text-decoration: none;
+}
+
+/* line 16, ../../sass/partials/nav.scss */
+mark {
+  background: transparent;
+  color: #ffcf00;
+}
+
+/* line 20, ../../sass/partials/nav.scss */
+.secret {
+  color: #002240;
+}
+
+/* line 24, ../../sass/partials/nav.scss */
+header, footer, #main {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+}
+/* line 30, ../../sass/partials/nav.scss */
+header nav, footer nav, #main nav {
+  -moz-transition: font-size 1s ease-in-out;
+  -o-transition: font-size 1s ease-in-out;
+  -webkit-transition: font-size 1s ease-in-out;
+  transition: font-size 1s ease-in-out;
+}
+/* line 31, ../../sass/partials/nav.scss */
+header nav ul, footer nav ul, #main nav ul {
+  width: 99%;
+  text-align: justify;
+  margin: 0 auto -1em auto;
+}
+/* line 36, ../../sass/partials/nav.scss */
+header nav ul:before, footer nav ul:before, #main nav ul:before {
+  content: '';
+  display: block;
+  width: 100%;
+}
+/* line 41, ../../sass/partials/nav.scss */
+header nav ul:after, footer nav ul:after, #main nav ul:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+/* line 46, ../../sass/partials/nav.scss */
+header nav ul li, footer nav ul li, #main nav ul li {
+  display: inline-block;
+  margin: 0;
+}
+@media screen and (max-width: 767px) and (min-width: 501px), screen and (max-width: 500px) {
+  /* line 53, ../../sass/partials/nav.scss */
+  header nav .siteTitle, footer nav .siteTitle, #main nav .siteTitle {
+    width: 100%;
+    margin-bottom: 1em;
+    margin-top: .5em;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 501px) {
+  /* line 60, ../../sass/partials/nav.scss */
+  header nav ul li, footer nav ul li, #main nav ul li {
+    float: left;
+    margin-right: 10%;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* line 30, ../../sass/partials/nav.scss */
+  header nav, footer nav, #main nav {
+    font-size: 95%;
+  }
+  /* line 68, ../../sass/partials/nav.scss */
+  header nav .siteTitle, footer nav .siteTitle, #main nav .siteTitle {
+    text-align: center;
+  }
+}
+
+/* line 75, ../../sass/partials/nav.scss */
+.hedgebat-container {
+  border: 2px solid #ff8f00;
+}
+/* line 78, ../../sass/partials/nav.scss */
+header .hedgebat-container {
+  margin-top: 1.5%;
+  margin-bottom: 1%;
+}
+/* line 82, ../../sass/partials/nav.scss */
+footer .hedgebat-container {
+  margin-bottom: 1.5%;
+  margin-top: 1%;
+}
+
+/* line 88, ../../sass/partials/nav.scss */
+.hedgebat {
+  background: transparent url(../img/hedgebat.jpg) top center no-repeat;
+  background-size: cover;
+  width: 98%;
+  margin: 1% auto;
+  height: 0;
+  padding-bottom: 20%;
+  -moz-transition: padding-bottom 1s ease-in-out;
+  -o-transition: padding-bottom 1s ease-in-out;
+  -webkit-transition: padding-bottom 1s ease-in-out;
+  transition: padding-bottom 1s ease-in-out;
+}
+@media screen and (max-width: 1080px) and (min-width: 768px) {
+  /* line 88, ../../sass/partials/nav.scss */
+  .hedgebat {
+    padding-bottom: 18%;
+  }
+}
+@media screen and (min-width: 1081px) {
+  /* line 88, ../../sass/partials/nav.scss */
+  .hedgebat {
+    padding-bottom: 16%;
+  }
+}
+/* line 102, ../../sass/partials/nav.scss */
+footer .hedgebat {
+  background-position: center bottom;
+}

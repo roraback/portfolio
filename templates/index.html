@@ -1,13 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
 		<div id="main" role="main">
-			{% for category in category_list %}
+{% for category in category_list %}
+	{% if category.project_set.all.count > 0 %}
 			<section class="indexSection">
 				<h2>{{ category.title }}</h2>
-				{% for project in category.project_set.all %}
-				<a href="{% url 'project' project.slug %}">{{ project.title }}</a>
-				{% endfor %}
+				<ul>
+		{% for project in category.project_set.all %}
+					<li>
+						<a href="{% url 'project' project.slug %}">
+							<figure>
+								<img src="{{ project.thumbnail.url }}" alt="{{ project.title }}" />
+								<figcaption><span>{{ project.title|safe }}</span></figcaption>
+							</figure>
+						</a>
+					</li>
+		{% endfor %}
+	{% endif %}
+				</ul>
 			</section>
-			{% endfor %}
+{% endfor %}
 		</div>
 {% endblock %}

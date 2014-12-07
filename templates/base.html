@@ -11,10 +11,16 @@
 		<meta name="description" content="{% block description %}Kenneth Roraback's portfolio website: Come and check out projects in web and mobile design, interaction, branding, video, theater and architecture. If you like it, let Kenny know by sending him an e-mail!{% endblock %}">
 		<meta name="keywords" content="{% block keywords %}kenneth roraback kenny UX design user experience interactive video theater architecture typography MIT parsons design{% endblock %}" />
 
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-
         <link rel="stylesheet" href="{{ STATIC_URL }}stylesheets/normalize.css">
         <link rel="stylesheet" href="{{ STATIC_URL }}stylesheets/main.css">
+	    <link rel="shortcut icon" href="{{ STATIC_URL }}img/icons/favicon.ico" />
+	    <link rel="apple-touch-icon" href="{{ STATIC_URL }}img/icons/apple-touch-icon.png" />
+	    <link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}img/icons/apple-touch-icon-precomposed.png"/>
+	    <link rel="apple-touch-icon" sizes="72x72" href="{{ STATIC_URL }}img/icons/apple-touch-icon-72x72-precomposed.png" />
+	    <link rel="apple-touch-icon" sizes="114x114" href="{{ STATIC_URL }}img/icons/apple-touch-icon-114x114-precomposed.png" />
+	    <link rel="apple-touch-icon" sizes= "144x144" href="{{ STATIC_URL }}img/icons/apple-touch-icon-144x144-precomposed.png" />
+		<script type="text/javascript" src="http://use.typekit.com/lcf0sfk.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
         <script src="{{ STATIC_URL }}js/vendor/modernizr-2.6.2.min.js"></script>
     </head>
     <body>
@@ -22,22 +28,43 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!-- Add your site or application content here -->
 		<header>
-			<a href="{{ BASE_DIR }}" title="Kenneth Roraback - Home"><img src="{{ STATIC_URL }}img/head.jpg" alt="The head of a &ldquo;Golden Hedgebat,&rdquo; created by a (very) young Kenny Roraback."></a>
+			<div class="hedgebat-container">
+				<a href="{% url 'home' %}" title="Kenneth Roraback - Home">
+					<div class="hedgebat">
+						<span>Mobile - Web - User Experience - Interaction - Design - Development - Frontend - Backend - APIs - Branding - Type - Video - Theater - Architecture</span>
+					</div>
+				</a>
+			</div>
 			<nav>
 				<ul>
-					<li class="siteTitle"><h1><a href="{{ BASE_DIR }}" title="Kenneth Roraback - Home"><span class="secret">'</span>Kenneth Roraback<span class="secret">'</span> <mark>=&gt;</mark> <span class="secret">'</span>The Stories I Tell<span class="secret">'</span></a></h1></li>
-					<li><h2><a href=""><mark>About</mark></a></h2></li>
+					<li class="siteTitle"><h1><a href="{% url 'home' %}" title="Kenneth Roraback - Home"><span class="secret">'</span>Kenneth Roraback<span class="secret">'</span><mark>=&gt;</mark><span class="secret">'</span>The Stories I Tell<span class="secret">'</span></a></h1></li>
+					<li><h2><a href="{% url 'about' %}"><mark>&nbsp;About</mark></a></h2></li>
 					<li><h2><a href="{{ STATIC_URL }}pdf/kenneth_roraback_resume.pdf" target="_blank" title="Kenneth Roraback's Resume"><mark>Resum&eacute;</mark></a></h2></li>
-					<li><h2><a href=""><mark>Contact</mark></a></h2></li>
-					<li><h2><a href=""><mark>THESIS</mark></a></h2></li>
-					<li><h2><a href="javascript:randomproject()" title="random project"><mark>Get lucky!</mark></a></h2></li>
+					<li><h2><a href="{% url 'contact' %}"><mark>Contact</mark></a></h2></li>
+					<li><h2><a href="javascript:randomproject()" title="random project"><mark>Get lucky!&nbsp;</mark></a></h2></li>
 				</ul>
 			</nav>
 		</header>
 
 {% block content %}{% endblock %}
+
+		<footer>
+			<nav>
+				<ul>
+					<li class="siteTitle"><h1><a href="{% url 'home' %}" title="Kenneth Roraback - Home"><span class="secret">'</span>Kenneth Roraback<span class="secret">'</span><mark>=&gt;</mark><span class="secret">'</span>The Stories I Tell<span class="secret">'</span></a></h1></li>
+					<li><h2><a href="{% url 'about' %}"><mark>&nbsp;About</mark></a></h2></li>
+					<li><h2><a href="{{ STATIC_URL }}/pdf/kenneth_roraback_resume.pdf" target="_blank"><mark>Resum&eacute;</mark></a></h2></li>
+					<li><h2><a href="{% url 'contact' %}"><mark>Contact</mark></a></h2></li>
+					<li><h2><a href="javascript:randomproject()" title="random project"><mark>Get lucky!&nbsp;</mark></a></h2></li>
+				</ul>
+			</nav>
+			<div class="hedgebat-container">
+				<a href="{% url 'home' %}" title="Kenneth Roraback - Home">
+					<div class="hedgebat"></div>
+				</a>
+			</div>
+		</footer>
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

@@ -1,0 +1,105 @@
+@import "vars";
+@import "compass/css3";
+
+nav a {
+  color: $navLinkColor;
+  text-decoration: none;
+}
+nav a:hover mark {
+  color: $linkHover;
+}
+
+h1 a {
+  color: $linkColor;
+  text-decoration: none;
+}
+mark {
+  background: transparent;
+  color: $navLinkColor;
+}
+.secret {
+  color: $bgColor;
+}
+
+header, footer, #main {
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  clear: both;
+  
+  nav {
+    ul {
+      width: 99%;
+      text-align: justify;
+      margin: 0 auto -1em auto;
+      
+      &:before {
+        content: '';
+        display: block;
+        width: 100%;
+      }
+      &:after {
+        content: '';
+        display: inline-block;
+        width: 100%;
+      }
+      li {
+        display: inline-block;
+        margin: 0;
+      }
+    }
+    @include single-transition(font-size, 1s, ease-in-out);
+    @media #{$brotherBear}, #{$sisterBear} {
+      .siteTitle {
+        width: 100%;
+        margin-bottom: 1em;
+        margin-top: .5em;
+      }
+    }
+    @media #{$brotherBear} {
+      ul li {
+        float: left;
+        margin-right: 10%;
+      }
+    }
+    @media #{$sisterBear} {
+      font-size: 95%;
+
+      .siteTitle {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.hedgebat-container {
+  border: 2px solid $linkColor;
+  
+  header & {
+    margin-top: 1.5%;
+    margin-bottom: 1%;
+  }
+  footer & {
+    margin-bottom: 1.5%;
+    margin-top: 1%;
+  }
+}
+
+.hedgebat {
+  background: transparent url(../img/hedgebat.jpg) top center no-repeat;
+  background-size: cover;
+  width: 98%;
+  margin: 1% auto;
+  height: 0;
+  padding-bottom: 20%;
+  @include single-transition(padding-bottom, 1s, ease-in-out);
+  @media #{$mamaBear} {
+    padding-bottom: 18%;
+  }
+  @media #{$papaBear} {
+    padding-bottom: 16%;
+  }
+  footer & {
+    background-position: center bottom;
+  }
+}
