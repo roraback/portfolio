@@ -2,34 +2,58 @@
 body {
   background-color: #002240;
   color: #eaeaea;
+  font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", sans-serif;
 }
-@media screen and (min-width: 1081px) {
+@media screen and (min-width: 1024px) {
   /* line 4, ../../sass/partials/core.scss */
   body {
     font-size: 115%;
   }
 }
 
-/* line 12, ../../sass/partials/core.scss */
+/* line 13, ../../sass/partials/core.scss */
 h1, h2, h3, h4 {
   font-family: "droid-sans-mono-1", "droid-sans-mono-2", monospace, sans-serif;
   clear: both;
 }
 
-/* line 18, ../../sass/partials/core.scss */
-.indexSection h2 {
+/* line 17, ../../sass/partials/core.scss */
+#main {
+  width: 92.72%;
+  margin: 0 auto;
+  clear: both;
+}
+/* line 22, ../../sass/partials/core.scss */
+#main h2 {
   font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", sans-serif;
   font-weight: 300;
   font-size: 200%;
-  margin-left: 1.2%;
   padding-top: .5em;
 }
-/* line 25, ../../sass/partials/core.scss */
+@media screen and (max-width: 1023px) and (min-width: 768px), screen and (min-width: 1024px) {
+  /* line 22, ../../sass/partials/core.scss */
+  #main h2 {
+    margin-bottom: .3em;
+  }
+}
+/* line 32, ../../sass/partials/core.scss */
+#main p {
+  font-weight: 300;
+  font-size: 1.1em;
+  line-height: 1.3em;
+}
+/* line 37, ../../sass/partials/core.scss */
+#main p {
+  padding-bottom: .8em;
+  text-indent: -2px;
+}
+
+/* line 43, ../../sass/partials/core.scss */
 .indexSection ul {
   width: 97.6%;
   margin: 0 auto;
 }
-/* line 29, ../../sass/partials/core.scss */
+/* line 47, ../../sass/partials/core.scss */
 .indexSection ul li {
   float: left;
   width: 19%;
@@ -43,11 +67,11 @@ h1, h2, h3, h4 {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 37, ../../sass/partials/core.scss */
+/* line 55, ../../sass/partials/core.scss */
 .indexSection ul li:nth-child(5n) {
   margin-right: 0;
 }
-/* line 42, ../../sass/partials/core.scss */
+/* line 60, ../../sass/partials/core.scss */
 .indexSection ul li img {
   width: 100%;
   height: auto;
@@ -55,7 +79,7 @@ h1, h2, h3, h4 {
   top: 0;
   left: 0;
 }
-/* line 49, ../../sass/partials/core.scss */
+/* line 67, ../../sass/partials/core.scss */
 .indexSection ul li figcaption {
   position: absolute;
   display: table;
@@ -79,50 +103,50 @@ h1, h2, h3, h4 {
   font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", sans-serif;
   font-weight: 200;
 }
-/* line 67, ../../sass/partials/core.scss */
+/* line 85, ../../sass/partials/core.scss */
 .indexSection ul li figcaption span {
   display: table-cell;
   vertical-align: middle;
   border: none;
   width: 100%;
 }
-@media screen and (max-width: 1080px) and (min-width: 768px) {
-  /* line 29, ../../sass/partials/core.scss */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  /* line 47, ../../sass/partials/core.scss */
   .indexSection ul li {
     width: 23.5%;
     padding-bottom: 23.5%;
     margin: 0 2% 2% 0;
   }
-  /* line 79, ../../sass/partials/core.scss */
+  /* line 97, ../../sass/partials/core.scss */
   .indexSection ul li:nth-child(4n) {
     margin-right: 0;
   }
 }
 @media screen and (max-width: 767px) and (min-width: 501px) {
-  /* line 29, ../../sass/partials/core.scss */
+  /* line 47, ../../sass/partials/core.scss */
   .indexSection ul li {
     width: 32%;
     padding-bottom: 32%;
     margin: 0 2% 2% 0;
   }
-  /* line 89, ../../sass/partials/core.scss */
+  /* line 107, ../../sass/partials/core.scss */
   .indexSection ul li:nth-child(3n) {
     margin-right: 0;
   }
 }
 @media screen and (max-width: 500px) {
-  /* line 29, ../../sass/partials/core.scss */
+  /* line 47, ../../sass/partials/core.scss */
   .indexSection ul li {
     width: 48.5%;
     padding-bottom: 47%;
     margin: 0 3% 3% 0;
   }
-  /* line 98, ../../sass/partials/core.scss */
+  /* line 116, ../../sass/partials/core.scss */
   .indexSection ul li:nth-child(2n) {
     margin-right: 0;
   }
 }
-/* line 105, ../../sass/partials/core.scss */
+/* line 123, ../../sass/partials/core.scss */
 .indexSection ul li:hover figcaption {
   top: 60%;
 }

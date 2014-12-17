@@ -21,7 +21,7 @@ mark {
   color: $bgColor;
 }
 
-header, footer, #main {
+header, footer {
   width: 95%;
   margin-left: auto;
   margin-right: auto;
@@ -71,7 +71,9 @@ header, footer, #main {
     }
   }
 }
-
+footer {
+  padding-top: 1em;
+}
 .hedgebat-container {
   border: 2px solid $linkColor;
   
@@ -98,6 +100,9 @@ header, footer, #main {
   }
   @media #{$papaBear} {
     padding-bottom: 16%;
+  }
+  @media #{$grandmaBear} {
+    padding-bottom: 14%;
   }
   footer & {
     background-position: center bottom;

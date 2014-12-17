@@ -1,0 +1,89 @@
+@import "vars";
+@import "compass/css3";
+
+.slideshow {
+  overflow:hidden;
+  margin: .5em 0;
+  position: relative;
+  width:100%;
+  
+  @media #{$mamaBear}, #{$papaBear} {
+    float: right;
+    width: 66%;
+    margin: 0 0 0 .8em;
+  }
+  
+  .image-container {
+    left:0;
+    position: relative;
+    height: auto;
+    @include single-transition(left, .5s, ease-in-out);
+    
+    figure {
+      float: left;
+      margin: 0;
+      padding: 0;
+      
+      .content-wrapper {
+        width: 100%;
+        height: 0;
+        position: relative;
+        
+        img, iframe {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: block;
+        }
+      }
+      figcaption {
+        font-weight: 300;
+        line-height: 1.3em;
+        padding-top: .5em;
+        color: $lighterBlue;
+        font-weight: 600 !important;
+
+        @media #{$mamaBear}, #{$papaBear} {
+          font-size: .9em;
+        }
+      }
+    }
+  }
+  
+  .left-bar, .right-bar {
+    @include opacity(0);
+    @include single-transition(opacity, 0.1s, ease-in);
+    @include single-transition(opacity, 0.5s, ease-out);
+    min-width: 10%;
+    overflow: hidden;
+    height: 400px;
+    background-color: rgba($bgColor,.5);
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    @include background-size(25%,12%);
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  .left-bar {
+    left: -1px;
+    font-family: "ache";
+    background-image: url(../img/arrow-left.png);
+    @include border-radius(0 500px 500px 0);
+    background-position: 35% center;
+  }
+  .right-bar {
+    right: -1px;
+    background-image: url(../img/arrow-right.png);
+    @include border-radius(500px 0 0 500px);
+    background-position: 59.7% center;
+  }
+  
+  &:hover {
+    .left-bar, .right-bar {
+      @include opacity(1);
+    }
+  }
+}

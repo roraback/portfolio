@@ -1,7 +1,53 @@
 {% extends "base.html" %}
 
-{% block title %}Kenneth Roraback - {{ project.category }} - {{ project.title }}{% endblock %}
+{% block title %}Kenneth Roraback - {{ project.category }} - {{ project.title|safe }}{% endblock %}
 
 {% block content %}
-<a href="{{ BASE_URL }}">Kenneth Roraback - {{ project.category }} - {{ project.title }}</a>
+{% autoescape off %}
+	<div id="main" role="main">
+		<h2>{{ project.title }}</h2>
+		<div class="slideshow">
+			<div class="image-container" style="width:{% widthratio project.image_set.count|add:1 1 100 %}%;">
+				<figure style="width: {% widthratio 100 project.image_set.count|add:1 1 %}%;">
+				{% if project.has_video %}
+					<div class="content-wrapper" style="padding-bottom: {{ project.percentageHeight }}%;">
+						<iframe src="//player.vimeo.com/video/{{ project.video_embed_code }}" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
+					<figcaption>{{ project.main_caption }}</figcaption>
+				{% else %}
+					<div class="content-wrapper" style="padding-bottom: {{ project.percentageHeight }}%;">
+						<img src="{{ project.main_image.url }}" alt="{{ image.title }}" />
+					</div>
+					<figcaption>{{ project.main_caption }}</figcaption>
+				{% endif %}
+				</figure>
+	{% for image in project.image_set.all %}
+				<figure style="width:{% widthratio 100 project.image_set.count|add:1 1 %}%;">
+					<div class="content-wrapper" style="padding-bottom: {{ project.percentageHeight }}%;">
+						<img src="{{ image.image.url }}" alt="{{ image.title }}" />
+					</div>
+					<figcaption>{{ image.caption }}</figcaption>
+				</figure>
+	{% endfor %}
+			</div>
+			<div class="left-bar"></div>
+			<div class="right-bar"></div>
+		</div>
+		<p><span class="secret">'</span>Project<span class="secret">'</span> <mark>=&gt;</mark> <span class="secret">'</span>{{ project.description }}<span class="secret">',</span></p>
+		<p><span class="secret">'</span>Challenges<span class="secret">'</span> <mark>=&gt;</mark> <span class="secret">'</span>{{ project.challenges }}<span class="secret">',</span></p>
+		<p><span class="secret">'</span>Solutions<span class="secret">'</span> <mark>=&gt;</mark> <span class="secret">'</span>{{ project.solutions }}<span class="secret">'</span></p>
+	{% for addendum in project.addendum_set.all %}
+		<p><span class="secret">'</span>{{ addendum.title }}<span class="secret">'</span> <mark>=&gt;</mark> <span class="secret">'</span>{{ addendum.description }}<span class="secret">',</span>
+	{% endfor %}
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<mark>)<span class="secret">;</span></mark></p>
+	</div>
+	<script>
+		var percentageHeight = {{ project.percentageHeight }};
+	</script>
+{% endautoescape %}
+{% endblock %}
+
+{% block extrascripts %}
+<script>
+</script>
 {% endblock %}
