@@ -54,6 +54,13 @@ class Project(models.Model):
         self.slug = slugify(self.category) + '-' + slugify(self.title)
         super(Project, self).save(*args, **kwargs)
 
+    @property
+    def percentageHeight(self):
+        iHeight = self.main_image.height
+        iWidth = self.main_image.width
+        pHeight = 100.00 * iHeight / iWidth
+        return pHeight
+
 class Category(models.Model):
     title = models.CharField(max_length=30)
     rank = models.IntegerField()
