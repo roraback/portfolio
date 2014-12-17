@@ -40,6 +40,7 @@ class Project(models.Model):
     thumbnail = models.ImageField(upload_to="projects", default="img/defaultThumb.jpg", blank=True, null=True)
     main_image = models.ImageField(upload_to="projects", default="img/default.jpg", blank=True, null=True)
     main_caption = models.TextField(blank=True, null=True)
+    main_alt_tag = models.CharField(max_length=200)
     category = models.ForeignKey('Category')
     rank = models.IntegerField()
     slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)
