@@ -16,7 +16,7 @@
 					<figcaption>{{ project.main_caption }}</figcaption>
 				{% else %}
 					<div class="content-wrapper" style="padding-bottom: {{ project.percentageHeight }}%;">
-						<img src="{{ project.main_image.url }}" alt="{{ image.title }}" />
+						<img src="{{ project.main_image.url }}" alt="{{ project.main_alt_tag }}" />
 					</div>
 					<figcaption>{{ project.main_caption }}</figcaption>
 				{% endif %}
