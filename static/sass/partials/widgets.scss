@@ -12,7 +12,34 @@
     width: 66.7%;
     margin: 0 0 0 .8em;
   }
-  
+
+  &.vertical-layout {
+    .left-bar, .right-bar {
+      @include background-size(35%,16.8%);
+//      background-color: rgba($textColor,.25);
+    }
+
+    @media #{$sisterBear} {
+      width: 90%;
+      margin: .5em 0 .5em 0;
+    }
+    @media #{$brotherBear} {
+      width: 50%;
+      float: right;
+      margin: 0 0 0 .8em;
+    }
+    @media #{$mamaBear}, #{$papaBear} {
+      width: 33%;
+      float: right;
+      margin: 0 0 0 .8em;
+    }
+    @media #{$grandmaBear} {
+      width: 25%;
+      float: right;
+      margin: 0 0 0 .8em;
+    }
+  }
+
   .image-container {
     left:0;
     position: relative;
@@ -69,7 +96,6 @@
   }
   .left-bar {
     left: -1px;
-    font-family: "ache";
     background-image: url(../img/arrow-left.png);
     @include border-radius(0 500px 500px 0);
     background-position: 35% center;

@@ -25,8 +25,13 @@ $(function() {
     });
     function slideResize () {
         currentWidth = $(".slideshow").width();
-        proportionedHeight = currentWidth * percentageHeight / 300;
-        $(".left-bar, .right-bar").css({"height": proportionedHeight + "px", "margin-top": proportionedHeight + "px", "width": proportionedHeight/2 + "px"});
+        if ($(".slideshow").hasClass("vertical-layout")) {
+            proportionedHeight = currentWidth * percentageHeight / 600;
+            $(".left-bar, .right-bar").css({"height": proportionedHeight + "px", "margin-top": proportionedHeight * 2.5 + "px", "width": proportionedHeight/2 + "px"});
+        } else {
+            proportionedHeight = currentWidth * percentageHeight / 300;
+            $(".left-bar, .right-bar").css({"height": proportionedHeight + "px", "margin-top": proportionedHeight + "px", "width": proportionedHeight/2 + "px"});
+        }
     }
     slideResize();
     window.addEventListener('resize', function(event){

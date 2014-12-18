@@ -6,7 +6,7 @@
 {% autoescape off %}
 	<div id="main" role="main">
 		<h2>{{ project.title }}</h2>
-		<div class="slideshow">
+		<div class="slideshow{% if project.percentageHeight > 100 %} vertical-layout{% endif %}">
 			<div class="image-container" style="width:{% widthratio project.image_set.count|add:1 1 100 %}%;">
 				<figure style="width: {% widthratio 100 project.image_set.count|add:1 1 %}%;">
 				{% if project.has_video %}
