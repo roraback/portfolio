@@ -19,6 +19,16 @@ h1, h2, h3, h4 {
   margin: 0 auto;
   clear: both;
   
+  a {
+    color: $linkColor;
+    text-decoration: none;
+  }
+  a:visited {
+    color: $linkVisited;
+  }
+  a:hover {
+    color: $linkHover;
+  }
   h2 {
     font-family: $bodyFont;
     font-weight:300;
