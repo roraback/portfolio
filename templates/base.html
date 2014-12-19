@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load tags %}
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -42,7 +43,7 @@
 					<li><h2><a href="{% url 'about' %}"><mark>&nbsp;About</mark></a></h2></li>
 					<li><h2><a href="{{ STATIC_URL }}pdf/kenneth_roraback_resume.pdf" target="_blank" title="Kenneth Roraback's Resume"><mark>Resum&eacute;</mark></a></h2></li>
 					<li><h2><a href="{% url 'contact' %}"><mark>Contact</mark></a></h2></li>
-					<li><h2><a href="javascript:randomproject()" title="random project"><mark>Get lucky!&nbsp;</mark></a></h2></li>
+					<li><h2><a href="{% random_project %}" title="random project"><mark>Get lucky!&nbsp;</mark></a></h2></li>
 				</ul>
 			</nav>
 		</header>
@@ -56,7 +57,7 @@
 					<li><h2><a href="{% url 'about' %}"><mark>&nbsp;About</mark></a></h2></li>
 					<li><h2><a href="{{ STATIC_URL }}/pdf/kenneth_roraback_resume.pdf" target="_blank"><mark>Resum&eacute;</mark></a></h2></li>
 					<li><h2><a href="{% url 'contact' %}"><mark>Contact</mark></a></h2></li>
-					<li><h2><a href="javascript:randomproject()" title="random project"><mark>Get lucky!&nbsp;</mark></a></h2></li>
+					<li><h2><a href="{% random_project %}" title="random project"><mark>Get lucky!&nbsp;</mark></a></h2></li>
 				</ul>
 			</nav>
 			<div class="hedgebat-container">
