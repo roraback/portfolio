@@ -44,6 +44,7 @@ class Project(models.Model):
     category = models.ForeignKey('Category')
     rank = models.IntegerField()
     slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)
+    login_required = models.BooleanField(default=False)
     
     class Meta:
         ordering = ["rank"]
