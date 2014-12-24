@@ -37,4 +37,21 @@ $(function() {
     window.addEventListener('resize', function(event){
         slideResize();
     });
+    $("#loginForm").submit(function(e){
+        e.preventDefault();
+        jQuery.ajax({
+            url: '.',
+            method: 'POST',
+            data: $('#loginForm').serialize()
+        }).done(function(response) {
+            if (response == "success") {
+                location.reload();
+            } else {
+                $(".errors").html(response).css("height", "1.5em");
+            }
+        }).fail(function() {
+            alert("Whoops! We had an error; please try again!");
+        })
+        
+    });
 });
