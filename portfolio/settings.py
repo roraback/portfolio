@@ -93,13 +93,13 @@ if os.environ.get('DJANGO_PRODUCTION'):
     print "I think I'm a production environment"
     # ENVIRONMENT = 'PRODUCTION'
     # DEBUG = False
+    DEFAULT_FILE_STORAGE = 'portfolio.s3utils.MediaS3BotoStorage'
+    STATICFILES_STORAGE = 'portfolio.s3utils.MediaS3BotoStorage'
+
     AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_BUCKET', 'kennethroraback')
-    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
     S3_URL = 'https://%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_KEY')
-    STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-
     MEDIA_DIRECTORY = '/media/'
     STATIC_DIRECTORY = '/static/'
     STATIC_URL = S3_URL + STATIC_DIRECTORY
