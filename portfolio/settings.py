@@ -44,14 +44,14 @@ DJANGO_APPS = (
 )
 
 THIRD_PARTY_APPS = (
-    
+    'storages',
 )
 
 LOCAL_APPS = (
     'projects',
 )
 
-INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS
+INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
