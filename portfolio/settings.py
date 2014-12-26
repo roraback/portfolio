@@ -91,8 +91,8 @@ USE_TZ = True
 
 if os.environ.get('DJANGO_PRODUCTION'):
     print "I think I'm a production environment"
-    ENVIRONMENT = 'PRODUCTION'
-    DEBUG = False
+    # ENVIRONMENT = 'PRODUCTION'
+    # DEBUG = False
     AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_BUCKET', 'kennethroraback')
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
     S3_URL = 'https://%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
