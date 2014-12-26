@@ -8,11 +8,6 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/1.7/ref/settings/
 """
 
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.7/howto/deployment/checklist/
 
@@ -27,9 +22,14 @@ TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 import dj_database_url
-
 DATABASES = {}
-DATABASES['default'] = dj_database_url.config(default='postgres://127.0.0.1:5432/DATABASE_NAME')
+DATABASES['default'] = dj_database_url.config()
+
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
+import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # Application definition
 
@@ -91,6 +91,7 @@ USE_TZ = True
 MEDIA_DIRECTORY = '/media/'
 STATIC_DIRECTORY = '/static/'
 MEDIA_URL = '/media/'
+STATIC_ROOT = 'staticfiles'
 STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
