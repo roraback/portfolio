@@ -85,7 +85,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
@@ -94,7 +93,7 @@ if os.environ.get('DJANGO_PRODUCTION'):
     # ENVIRONMENT = 'PRODUCTION'
     # DEBUG = False
     DEFAULT_FILE_STORAGE = 'portfolio.s3utils.MediaS3BotoStorage'
-    STATICFILES_STORAGE = 'portfolio.s3utils.MediaS3BotoStorage'
+    STATICFILES_STORAGE = 'portfolio.s3utils.StaticS3BotoStorage'
 
     AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_BUCKET', 'kennethroraback')
     S3_URL = 'https://%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
