@@ -23,7 +23,7 @@ ALLOWED_HOSTS = []
 
 import dj_database_url
 DATABASES = {}
-DATABASES['default'] = dj_database_url.config()
+DATABASES['default'] = dj_database_url.config(default='postgres://127.0.0.1:5432/kennethroraback')
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
@@ -88,12 +88,29 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
-MEDIA_DIRECTORY = '/media/'
-STATIC_DIRECTORY = '/static/'
-MEDIA_URL = '/media/'
-STATIC_ROOT = 'staticfiles'
-STATIC_URL = '/static/'
-MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+if os.environ.get('DJANGO_PRODUCTION'):
+    print "I think I'm a production environment"
+    ENVIRONMENT = 'PRODUCTION'
+    DEBUG = False
+    AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_BUCKET', 'kennethroraback')
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+    S3_URL = 'https://%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+
+    MEDIA_DIRECTORY = '/media/'
+    STATIC_DIRECTORY = '/static/'
+    STATIC_URL = S3_URL + STATIC_DIRECTORY
+    MEDIA_URL = S3_URL + MEDIA_DIRECTORY
+    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_KEY_ID')
+    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_KEY')
+
+else:
+    MEDIA_DIRECTORY = '/media/'
+    STATIC_DIRECTORY = '/static/'
+    MEDIA_URL = '/media/'
+    STATIC_ROOT = 'staticfiles'
+    STATIC_URL = '/static/'
+    MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
