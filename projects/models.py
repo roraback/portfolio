@@ -1,3 +1,4 @@
+import math
 from django.db import models
 from django.template.defaultfilters import slugify
 
@@ -62,6 +63,14 @@ class Project(models.Model):
         iWidth = self.main_image.width
         pHeight = 100.00 * iHeight / iWidth
         return pHeight
+    
+    @property
+    def percentageWidth(self):
+        numImages = self.image_set.all().count() + 1
+        pWidth = math.floor(100 * 1000 / numImages)
+        pWidth = round(pWidth/1000,3)
+        print pWidth
+        return pWidth
 
 class Category(models.Model):
     title = models.CharField(max_length=30)
