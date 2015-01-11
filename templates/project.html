@@ -48,7 +48,9 @@
 		</div>
 		<p><span class="secret">'</span>Project<span class="secret">'</span> <mark>=&gt;</mark> <span class="secret">'</span>{{ project.description }}<span class="secret">',</span></p>
 		<p><span class="secret">'</span>Challenges<span class="secret">'</span> <mark>=&gt;</mark> <span class="secret">'</span>{{ project.challenges }}<span class="secret">',</span></p>
+		{% if project.solutions != "" %}
 		<p><span class="secret">'</span>Solutions<span class="secret">'</span> <mark>=&gt;</mark> <span class="secret">'</span>{{ project.solutions }}<span class="secret">'</span></p>
+		{% endif %}
 	{% for addendum in project.addendum_set.all %}
 		<p><span class="secret">'</span>{{ addendum.title }}<span class="secret">'</span> <mark>=&gt;</mark> <span class="secret">'</span>{{ addendum.description }}<span class="secret">',</span>
 	{% endfor %}
