@@ -90,8 +90,8 @@ USE_TZ = True
 
 if os.environ.get('DJANGO_PRODUCTION'):
     print "I think I'm a production environment"
-    # ENVIRONMENT = 'PRODUCTION'
-    # DEBUG = False
+    ENVIRONMENT = 'PRODUCTION'
+    DEBUG = False
     DEFAULT_FILE_STORAGE = 'portfolio.s3utils.MediaS3BotoStorage'
     STATICFILES_STORAGE = 'portfolio.s3utils.StaticS3BotoStorage'
 
