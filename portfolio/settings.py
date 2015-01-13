@@ -94,6 +94,7 @@ if os.environ.get('DJANGO_PRODUCTION'):
     DEBUG = False
     DEFAULT_FILE_STORAGE = 'portfolio.s3utils.MediaS3BotoStorage'
     STATICFILES_STORAGE = 'portfolio.s3utils.StaticS3BotoStorage'
+    ALLOWED_HOSTS = ['*']
 
     AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_BUCKET', 'kennethroraback')
     S3_URL = 'https://%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
