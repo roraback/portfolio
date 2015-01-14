@@ -1,6 +1,6 @@
 from django.contrib.auth import authenticate, login
 from django.views.generic import ListView, DetailView, TemplateView
-from django.http import HttpResponse, HttpResponsePermanentRedirect, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponsePermanentRedirect
 from django.core.urlresolvers import reverse
 
 from projects.models import Category, Project
@@ -23,55 +23,55 @@ class IndexView(ListView):
             project = self.request.GET["project"]
 
             if project == 'mfadtsymposium':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=18).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=18).slug}))
             elif project == 'globalbillboard':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=17).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=17).slug}))
             elif project == 'firstreaders':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=8).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=8).slug}))
             elif project == 'learnwithhomer':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=28).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=28).slug}))
             elif project == 'opensansschoolbook':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=19).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=19).slug}))
             elif project == 'vulnerabilitymapping':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=27).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=27).slug}))
             elif project == 'costofhcv':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=24).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=24).slug}))
             elif project == 'hrmap':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=10).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=10).slug}))
             elif project == 'explodingtwitbird':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=15).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=15).slug}))
             elif project == 'tweetstalker':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=25).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=25).slug}))
             elif project == 'bigbook':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=6).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=6).slug}))
             elif project == 'ehrntemplates':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=11).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=11).slug}))
             elif project == 'ehrnstyleguide':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=12).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=12).slug}))
             elif project == 'emmanuel':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=14).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=14).slug}))
             elif project == 'benpowell':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=3).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=3).slug}))
             elif project == '3x3':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=4).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=4).slug}))
             elif project == 'bicycle':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=5).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=5).slug}))
             elif project == 'psychosis_text':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=22).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=22).slug}))
             elif project == 'psychosis_design':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=21).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=21).slug}))
             elif project == 'psychosis_direction':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=20).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=20).slug}))
             elif project == 'ecity':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=13).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=13).slug}))
             elif project == 'readingroom':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=23).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=23).slug}))
             elif project == 'designstudio':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=1).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=1).slug}))
             elif project == 'wolfgangweingart':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=26).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=26).slug}))
             elif project == 'expressivetype':
-                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=16).slug}))
+                return HttpResponsePermanentRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=16).slug}))
             else:
                 return super(IndexView, self).dispatch(*args, **kwargs)
         else:
