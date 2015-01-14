@@ -26,6 +26,14 @@ class IndexView(ListView):
                 return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=18).slug}))
             elif project == 'globalbillboard':
                 return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=17).slug}))
+            elif project == 'firstreaders':
+                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=8).slug}))
+            elif project == 'learnwithhomer':
+                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=28).slug}))
+            elif project == 'opensansschoolbook':
+                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=19).slug}))
+            elif project == 'vulnerabilitymapping':
+                return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=27).slug}))
             elif project == 'costofhcv':
                 return HttpResponseRedirect(reverse('project', kwargs={'slug':Project.objects.get(pk=24).slug}))
             elif project == 'hrmap':
