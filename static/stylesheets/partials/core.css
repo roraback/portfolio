@@ -43,24 +43,34 @@ h1, h2, h3, h4 {
   font-size: 200%;
   padding-top: .5em;
 }
+/* line 38, ../../sass/partials/core.scss */
+#main h2.project-page {
+  padding-top: .8em;
+}
+@media screen and (max-width: 500px) {
+  /* line 38, ../../sass/partials/core.scss */
+  #main h2.project-page {
+    padding-top: .5em;
+  }
+}
 @media screen and (max-width: 1023px) and (min-width: 768px), screen and (min-width: 1024px) {
   /* line 32, ../../sass/partials/core.scss */
   #main h2 {
     margin-bottom: .3em;
   }
 }
-/* line 42, ../../sass/partials/core.scss */
+/* line 50, ../../sass/partials/core.scss */
 #main p {
   font-weight: 300;
   font-size: 1.1em;
   line-height: 1.3em;
 }
-/* line 47, ../../sass/partials/core.scss */
+/* line 55, ../../sass/partials/core.scss */
 #main p {
   padding-bottom: .8em;
   text-indent: -2px;
 }
-/* line 51, ../../sass/partials/core.scss */
+/* line 59, ../../sass/partials/core.scss */
 #main .errors {
   color: #ff80d3;
   height: 0;
@@ -73,19 +83,19 @@ h1, h2, h3, h4 {
   -webkit-transition: height 0.5s ease-in-out;
   transition: height 0.5s ease-in-out;
 }
-/* line 60, ../../sass/partials/core.scss */
+/* line 68, ../../sass/partials/core.scss */
 #main form {
   width: 100%;
   height: auto;
   min-height: 170px;
 }
 @media screen and (max-width: 500px) {
-  /* line 60, ../../sass/partials/core.scss */
+  /* line 68, ../../sass/partials/core.scss */
   #main form {
     min-height: 150px;
   }
 }
-/* line 68, ../../sass/partials/core.scss */
+/* line 76, ../../sass/partials/core.scss */
 #main form label, #main form input {
   float: left;
   margin-bottom: .5em;
@@ -94,14 +104,14 @@ h1, h2, h3, h4 {
   font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", sans-serif;
   font-weight: 300;
 }
-/* line 76, ../../sass/partials/core.scss */
+/* line 84, ../../sass/partials/core.scss */
 #main form label {
   clear: both;
   min-width: 10%;
   margin-right: 10px;
   margin-top: .1em;
 }
-/* line 82, ../../sass/partials/core.scss */
+/* line 90, ../../sass/partials/core.scss */
 #main form input[type="submit"] {
   display: block;
   clear: both;
@@ -111,17 +121,17 @@ h1, h2, h3, h4 {
   border: none;
   color: #fff;
 }
-/* line 91, ../../sass/partials/core.scss */
+/* line 99, ../../sass/partials/core.scss */
 #main form input[type="text"], #main form input[type="password"] {
   font-weight: 500;
   padding: 0 .3em;
 }
 
-/* line 98, ../../sass/partials/core.scss */
+/* line 106, ../../sass/partials/core.scss */
 .indexSection ul {
   margin: 0 auto;
 }
-/* line 101, ../../sass/partials/core.scss */
+/* line 109, ../../sass/partials/core.scss */
 .indexSection ul li {
   float: left;
   width: 19%;
@@ -135,11 +145,11 @@ h1, h2, h3, h4 {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-/* line 109, ../../sass/partials/core.scss */
+/* line 117, ../../sass/partials/core.scss */
 .indexSection ul li:nth-child(5n) {
   margin-right: 0;
 }
-/* line 114, ../../sass/partials/core.scss */
+/* line 122, ../../sass/partials/core.scss */
 .indexSection ul li img {
   width: 100%;
   height: auto;
@@ -147,7 +157,7 @@ h1, h2, h3, h4 {
   top: 0;
   left: 0;
 }
-/* line 121, ../../sass/partials/core.scss */
+/* line 129, ../../sass/partials/core.scss */
 .indexSection ul li figcaption {
   position: absolute;
   display: table;
@@ -171,7 +181,7 @@ h1, h2, h3, h4 {
   font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", sans-serif;
   font-weight: 200;
 }
-/* line 139, ../../sass/partials/core.scss */
+/* line 147, ../../sass/partials/core.scss */
 .indexSection ul li figcaption span {
   display: table-cell;
   vertical-align: middle;
@@ -179,42 +189,42 @@ h1, h2, h3, h4 {
   width: 100%;
 }
 @media screen and (max-width: 1023px) and (min-width: 768px) {
-  /* line 101, ../../sass/partials/core.scss */
+  /* line 109, ../../sass/partials/core.scss */
   .indexSection ul li {
     width: 23.5%;
     padding-bottom: 23.5%;
     margin: 0 2% 2% 0;
   }
-  /* line 151, ../../sass/partials/core.scss */
+  /* line 159, ../../sass/partials/core.scss */
   .indexSection ul li:nth-child(4n) {
     margin-right: 0;
   }
 }
 @media screen and (max-width: 767px) and (min-width: 501px) {
-  /* line 101, ../../sass/partials/core.scss */
+  /* line 109, ../../sass/partials/core.scss */
   .indexSection ul li {
     width: 32%;
     padding-bottom: 32%;
     margin: 0 2% 2% 0;
   }
-  /* line 161, ../../sass/partials/core.scss */
+  /* line 169, ../../sass/partials/core.scss */
   .indexSection ul li:nth-child(3n) {
     margin-right: 0;
   }
 }
 @media screen and (max-width: 500px) {
-  /* line 101, ../../sass/partials/core.scss */
+  /* line 109, ../../sass/partials/core.scss */
   .indexSection ul li {
     width: 48.5%;
     padding-bottom: 47%;
     margin: 0 3% 3% 0;
   }
-  /* line 170, ../../sass/partials/core.scss */
+  /* line 178, ../../sass/partials/core.scss */
   .indexSection ul li:nth-child(2n) {
     margin-right: 0;
   }
 }
-/* line 177, ../../sass/partials/core.scss */
+/* line 185, ../../sass/partials/core.scss */
 .indexSection ul li:hover figcaption {
   top: 60%;
 }
