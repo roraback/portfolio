@@ -1,6 +1,8 @@
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
+from django.core.urlresolvers import reverse
 from django.conf.urls.static import static
+from django.views.generic import RedirectView
 
 from django.conf import settings
 from projects.views import IndexView, ProjectView, AboutView, ContactView, SitemapView
@@ -18,3 +20,6 @@ urlpatterns = patterns('',
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Resume redirect from old site's URL to home
+urlpatterns += url(r'^kenneth_roraback_resume.pdf$', RedirectView.as_view(url=reverse('home')), name="resume_redirect"),
