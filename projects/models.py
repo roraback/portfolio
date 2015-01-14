@@ -67,8 +67,8 @@ class Project(models.Model):
     @property
     def percentageWidth(self):
         numImages = self.image_set.all().count() + 1
-        pWidth = math.floor(100 * 1000 / numImages)
-        pWidth = round(pWidth/1000,3)
+        pWidth = math.floor(100 * 100000 / numImages)
+        pWidth = round(pWidth/100000,5)
         print pWidth
         return pWidth
 
