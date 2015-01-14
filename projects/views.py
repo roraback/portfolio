@@ -30,3 +30,7 @@ class AboutView(TemplateView):
 
 class ContactView(TemplateView):
     template_name = 'contact.html'
+
+class SitemapView(ListView):
+    model = Project
+    template_name="sitemap.xml"
