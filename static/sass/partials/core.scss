@@ -156,6 +156,9 @@ h1, h2, h3, h4 {
         width: 23.5%;
         padding-bottom: 23.5%;
         margin: 0 2% 2% 0;
+        &:nth-child(5n) {
+          margin-right: 2%;
+        }
         &:nth-child(4n) {
           margin-right: 0;
         }
@@ -166,6 +169,9 @@ h1, h2, h3, h4 {
         padding-bottom: 32%;
         margin: 0 2% 2% 0;
         
+        &:nth-child(5n) {
+          margin-right: 2%;
+        }
         &:nth-child(3n) {
           margin-right: 0;
         }
@@ -175,6 +181,10 @@ h1, h2, h3, h4 {
         width: 48.5%;
         padding-bottom: 47%;
         margin: 0 3% 3% 0;
+        
+        &:nth-child(5n) {
+          margin-right: 3%;
+        }
         &:nth-child(2n) {
           margin-right: 0;
         }

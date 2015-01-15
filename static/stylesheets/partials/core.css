@@ -196,6 +196,10 @@ h1, h2, h3, h4 {
     margin: 0 2% 2% 0;
   }
   /* line 159, ../../sass/partials/core.scss */
+  .indexSection ul li:nth-child(5n) {
+    margin-right: 2%;
+  }
+  /* line 162, ../../sass/partials/core.scss */
   .indexSection ul li:nth-child(4n) {
     margin-right: 0;
   }
@@ -207,7 +211,11 @@ h1, h2, h3, h4 {
     padding-bottom: 32%;
     margin: 0 2% 2% 0;
   }
-  /* line 169, ../../sass/partials/core.scss */
+  /* line 172, ../../sass/partials/core.scss */
+  .indexSection ul li:nth-child(5n) {
+    margin-right: 2%;
+  }
+  /* line 175, ../../sass/partials/core.scss */
   .indexSection ul li:nth-child(3n) {
     margin-right: 0;
   }
@@ -219,12 +227,16 @@ h1, h2, h3, h4 {
     padding-bottom: 47%;
     margin: 0 3% 3% 0;
   }
-  /* line 178, ../../sass/partials/core.scss */
+  /* line 185, ../../sass/partials/core.scss */
+  .indexSection ul li:nth-child(5n) {
+    margin-right: 3%;
+  }
+  /* line 188, ../../sass/partials/core.scss */
   .indexSection ul li:nth-child(2n) {
     margin-right: 0;
   }
 }
-/* line 185, ../../sass/partials/core.scss */
+/* line 195, ../../sass/partials/core.scss */
 .indexSection ul li:hover figcaption {
   top: 60%;
 }
