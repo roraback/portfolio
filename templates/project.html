@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 
 {% block title %}Kenneth Roraback - {{ project.category }} - {{ project.title|safe }}{% endblock %}
-
+{% if not project.login_required %}
+	{% block description %}Project: {{ project.description }}{% endblock %}
+{% endif %}
 {% block content %}
 {% autoescape off %}
 	<div id="main" role="main">
