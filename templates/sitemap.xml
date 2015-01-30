@@ -21,7 +21,7 @@
 {% for project in project_list %}
 	{% if not project.login_required %}
 	<url>
-		<loc>http://{{ request.META.HTTP_HOST }}/{{ project.slug }}</loc>
+		<loc>http://{{ request.META.HTTP_HOST }}/projects/{{ project.slug }}</loc>
 		<lastmod>2014-06-29</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
