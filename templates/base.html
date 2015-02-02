@@ -12,8 +12,8 @@
 		<meta name="description" content="{% block description %}Kenneth Roraback's portfolio website: Come and check out projects in web and mobile design, interaction, branding, video, theater and architecture. If you like it, let Kenny know by sending him an e-mail!{% endblock %}">
 		<meta name="keywords" content="{% block keywords %}kenneth roraback kenny UX design user experience interactive video theater architecture typography MIT parsons design{% endblock %}" />
 
-        <link rel="stylesheet" href="{{ STATIC_URL }}{% if DJANGO_PRODUCTION %}prod_{% endif %}stylesheets/normalize.css">
-        <link rel="stylesheet" href="{{ STATIC_URL }}{% if DJANGO_PRODUCTION %}prod_{% endif %}stylesheets/main.css">
+        <link rel="stylesheet" href="{{ STATIC_URL }}{% if ENVIRONMENT = 'PRODUCTION' %}prod_{% endif %}stylesheets/normalize.css">
+        <link rel="stylesheet" href="{{ STATIC_URL }}{% if ENVIRONMENT = 'PRODUCTION' %}prod_{% endif %}stylesheets/main.css">
 	    <link rel="shortcut icon" href="{{ STATIC_URL }}img/icons/favicon.ico" />
 	    <link rel="apple-touch-icon" href="{{ STATIC_URL }}img/icons/apple-touch-icon.png" />
 	    <link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}img/icons/apple-touch-icon-precomposed.png"/>
