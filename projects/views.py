@@ -76,6 +76,10 @@ class IndexView(ListView):
                 return super(IndexView, self).dispatch(*args, **kwargs)
         else:
             return super(IndexView, self).dispatch(*args, **kwargs)
+    def get_context_data(self, **kwargs):
+        context = super(IndexView, self).get_context_data(**kwargs)
+        context['randomPopOrder'] = ('pop-zero', 'pop-one', 'pop-two', 'pop-three', 'pop-four', 'pop-five', 'pop-six', 'pop-seven', 'pop-eight', 'pop-nine', )
+        return context
 
 class ProjectView(DetailView):
     model = Project

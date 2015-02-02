@@ -5,8 +5,11 @@
   overflow:hidden;
   margin: .5em 0;
   position: relative;
-  width:100%;
-  
+  width: 100%;
+  top: 0;
+  left:0;
+  @include animation(imageSlide 1s 1);
+
   @media #{$mamaBear}, #{$papaBear} {
     float: right;
     width: 66.7%;

@@ -10,7 +10,7 @@
 					<li>
 						<a href="{% url 'project' project.slug %}" title="{{ project.title }}">
 							<figure>
-								<img src="{{ project.thumbnail.url }}" alt="{{ project.title }}" />
+								<img class="{{ randomPopOrder|random }}" src="{{ project.thumbnail.url }}" alt="{{ project.title }}" />
 								<figcaption><span>{{ project.title|safe }}</span></figcaption>
 							</figure>
 						</a>

@@ -1,0 +1,555 @@
+@-moz-keyframes imageSlide {
+  0% {
+    left: 50px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes imageSlide {
+  0% {
+    left: 50px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes imageSlide {
+  0% {
+    left: 50px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@-moz-keyframes textSlide {
+  0% {
+    left: -50px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 100%;
+  }
+}
+@-webkit-keyframes textSlide {
+  0% {
+    left: -50px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 100%;
+  }
+}
+@keyframes textSlide {
+  0% {
+    left: -50px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 100%;
+  }
+}
+@-moz-keyframes imagePopoutZero {
+  0% {
+    width: 2%;
+    opacity: 0;
+    margin: -1% 0 0 -1%;
+  }
+  97% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-webkit-keyframes imagePopoutZero {
+  0% {
+    width: 2%;
+    opacity: 0;
+    margin: -1% 0 0 -1%;
+  }
+  97% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@keyframes imagePopoutZero {
+  0% {
+    width: 2%;
+    opacity: 0;
+    margin: -1% 0 0 -1%;
+  }
+  97% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-moz-keyframes imagePopoutOne {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  3% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-webkit-keyframes imagePopoutOne {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  3% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@keyframes imagePopoutOne {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  3% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-moz-keyframes imagePopoutTwo {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  6% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-webkit-keyframes imagePopoutTwo {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  6% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@keyframes imagePopoutTwo {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  6% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-moz-keyframes imagePopoutThree {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  9% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-webkit-keyframes imagePopoutThree {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  9% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@keyframes imagePopoutThree {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  9% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-moz-keyframes imagePopoutFour {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  12% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-webkit-keyframes imagePopoutFour {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  12% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@keyframes imagePopoutFour {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  12% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-moz-keyframes imagePopoutFive {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  15% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-webkit-keyframes imagePopoutFive {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  15% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@keyframes imagePopoutFive {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  15% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-moz-keyframes imagePopoutSix {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  18% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-webkit-keyframes imagePopoutSix {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  18% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@keyframes imagePopoutSix {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  18% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-moz-keyframes imagePopoutSeven {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  21% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-webkit-keyframes imagePopoutSeven {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  21% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@keyframes imagePopoutSeven {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  21% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-moz-keyframes imagePopoutEight {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  24% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-webkit-keyframes imagePopoutEight {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  24% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@keyframes imagePopoutEight {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  24% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-moz-keyframes imagePopoutNine {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  26% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@-webkit-keyframes imagePopoutNine {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  26% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}
+@keyframes imagePopoutNine {
+  0% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  26% {
+    width: 0%;
+    opacity: 0;
+    margin: 0 0 0 0;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+    margin: -50% 0 0 -50%;
+  }
+}

@@ -1,0 +1,65 @@
+@import "vars";
+@import "compass/css3";
+
+//Slide from right
+@include keyframes(imageSlide) {
+  0%    {left: 50px; @include opacity(0);}
+  100%  {left: 0; @include opacity(1);}
+}
+
+//Slide from left
+@include keyframes(textSlide) {
+  0%    {left: -50px; opacity: 0;}
+  100%  {left: 0; opacity: 100%;}
+}
+
+//Homepage imagePopout
+@include keyframes(imagePopoutZero) {
+  0%    {width: 2%; @include opacity(0); margin: -1% 0 0 -1%;}
+  97%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+}
+@include keyframes(imagePopoutOne) {
+  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  3%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+}
+@include keyframes(imagePopoutTwo) {
+  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  6%  {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+}
+@include keyframes(imagePopoutThree) {
+  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  9%  {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+}
+@include keyframes(imagePopoutFour) {
+  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  12% {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+}
+@include keyframes(imagePopoutFive) {
+  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  15% {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+}
+@include keyframes(imagePopoutSix) {
+  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  18% {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+}
+@include keyframes(imagePopoutSeven) {
+  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  21% {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+}
+@include keyframes(imagePopoutEight) {
+  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  24% {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+}
+@include keyframes(imagePopoutNine) {
+  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  26% {width: 0%; @include opacity(0); margin: 0 0 0 0;}
+  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+}

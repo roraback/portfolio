@@ -34,6 +34,9 @@ h1, h2, h3, h4 {
     font-weight:300;
     font-size: 200%;
     padding-top: .5em;
+    position: relative;
+    left: 0;
+    @include animation(textSlide .75s 1);
 
     &.project-page {
       padding-top: .8em;
@@ -51,6 +54,9 @@ h1, h2, h3, h4 {
     font-weight: 300;
     font-size: 1.1em;
     line-height: 1.3em;
+    position: relative;
+    left:0;
+    @include animation(textSlide .75s 1);
   }
   p {
     padding-bottom: .8em;
@@ -123,8 +129,20 @@ h1, h2, h3, h4 {
         width: 100%;
         height: auto;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 50%;
+        left: 50%;
+        margin: -50% 0 0 -50%;
+
+        &.pop-zero {@include animation(imagePopoutZero 1.36s 1);}
+        &.pop-one {@include animation(imagePopoutOne 1.36s 1);}
+        &.pop-two {@include animation(imagePopoutTwo 1.36s 1);}
+        &.pop-three {@include animation(imagePopoutThree 1.36s 1);}
+        &.pop-four {@include animation(imagePopoutFour 1.36s 1);}
+        &.pop-five {@include animation(imagePopoutFive 1.36s 1);}
+        &.pop-six {@include animation(imagePopoutSix 1.36s 1);}
+        &.pop-seven {@include animation(imagePopoutSeven 1.36s 1);}
+        &.pop-eight {@include animation(imagePopoutEight 1.36s 1);}
+        &.pop-nine {@include animation(imagePopoutNine 1.36s 1);}
       }
       figcaption {
         position: absolute;
