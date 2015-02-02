@@ -618,6 +618,93 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin: -50% 0 0 -50%;
   }
 }
+@-moz-keyframes imageBounce {
+  0% {
+    top: 0;
+  }
+  13% {
+    top: -15px;
+  }
+  25% {
+    top: 0;
+  }
+  38% {
+    top: 7px;
+  }
+  50% {
+    top: 0;
+  }
+  63% {
+    top: 3px;
+  }
+  75% {
+    top: 0;
+  }
+  88% {
+    top: 1px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@-webkit-keyframes imageBounce {
+  0% {
+    top: 0;
+  }
+  13% {
+    top: -15px;
+  }
+  25% {
+    top: 0;
+  }
+  38% {
+    top: 7px;
+  }
+  50% {
+    top: 0;
+  }
+  63% {
+    top: 3px;
+  }
+  75% {
+    top: 0;
+  }
+  88% {
+    top: 1px;
+  }
+  100% {
+    top: 0;
+  }
+}
+@keyframes imageBounce {
+  0% {
+    top: 0;
+  }
+  13% {
+    top: -15px;
+  }
+  25% {
+    top: 0;
+  }
+  38% {
+    top: 7px;
+  }
+  50% {
+    top: 0;
+  }
+  63% {
+    top: 3px;
+  }
+  75% {
+    top: 0;
+  }
+  88% {
+    top: 1px;
+  }
+  100% {
+    top: 0;
+  }
+}
 /* line 4, ../sass/partials/core.scss */
 body {
   background-color: #002240;
@@ -770,16 +857,18 @@ h1, h2, h3, h4 {
   margin: 0 1.25% 1.25% 0;
   position: relative;
   overflow: hidden;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 /* line 123, ../sass/partials/core.scss */
 .indexSection ul li:nth-child(5n) {
   margin-right: 0;
 }
-/* line 128, ../sass/partials/core.scss */
+/* line 126, ../sass/partials/core.scss */
+.indexSection ul li:hover {
+  -moz-animation: imageBounce 0.8s 1;
+  -webkit-animation: imageBounce 0.8s 1;
+  animation: imageBounce 0.8s 1;
+}
+/* line 130, ../sass/partials/core.scss */
 .indexSection ul li img {
   width: 100%;
   height: auto;
@@ -788,67 +877,67 @@ h1, h2, h3, h4 {
   left: 50%;
   margin: -50% 0 0 -50%;
 }
-/* line 136, ../sass/partials/core.scss */
+/* line 138, ../sass/partials/core.scss */
 .indexSection ul li img.pop-zero {
   -moz-animation: imagePopoutZero 1.36s 1;
   -webkit-animation: imagePopoutZero 1.36s 1;
   animation: imagePopoutZero 1.36s 1;
 }
-/* line 137, ../sass/partials/core.scss */
+/* line 139, ../sass/partials/core.scss */
 .indexSection ul li img.pop-one {
   -moz-animation: imagePopoutOne 1.36s 1;
   -webkit-animation: imagePopoutOne 1.36s 1;
   animation: imagePopoutOne 1.36s 1;
 }
-/* line 138, ../sass/partials/core.scss */
+/* line 140, ../sass/partials/core.scss */
 .indexSection ul li img.pop-two {
   -moz-animation: imagePopoutTwo 1.36s 1;
   -webkit-animation: imagePopoutTwo 1.36s 1;
   animation: imagePopoutTwo 1.36s 1;
 }
-/* line 139, ../sass/partials/core.scss */
+/* line 141, ../sass/partials/core.scss */
 .indexSection ul li img.pop-three {
   -moz-animation: imagePopoutThree 1.36s 1;
   -webkit-animation: imagePopoutThree 1.36s 1;
   animation: imagePopoutThree 1.36s 1;
 }
-/* line 140, ../sass/partials/core.scss */
+/* line 142, ../sass/partials/core.scss */
 .indexSection ul li img.pop-four {
   -moz-animation: imagePopoutFour 1.36s 1;
   -webkit-animation: imagePopoutFour 1.36s 1;
   animation: imagePopoutFour 1.36s 1;
 }
-/* line 141, ../sass/partials/core.scss */
+/* line 143, ../sass/partials/core.scss */
 .indexSection ul li img.pop-five {
   -moz-animation: imagePopoutFive 1.36s 1;
   -webkit-animation: imagePopoutFive 1.36s 1;
   animation: imagePopoutFive 1.36s 1;
 }
-/* line 142, ../sass/partials/core.scss */
+/* line 144, ../sass/partials/core.scss */
 .indexSection ul li img.pop-six {
   -moz-animation: imagePopoutSix 1.36s 1;
   -webkit-animation: imagePopoutSix 1.36s 1;
   animation: imagePopoutSix 1.36s 1;
 }
-/* line 143, ../sass/partials/core.scss */
+/* line 145, ../sass/partials/core.scss */
 .indexSection ul li img.pop-seven {
   -moz-animation: imagePopoutSeven 1.36s 1;
   -webkit-animation: imagePopoutSeven 1.36s 1;
   animation: imagePopoutSeven 1.36s 1;
 }
-/* line 144, ../sass/partials/core.scss */
+/* line 146, ../sass/partials/core.scss */
 .indexSection ul li img.pop-eight {
   -moz-animation: imagePopoutEight 1.36s 1;
   -webkit-animation: imagePopoutEight 1.36s 1;
   animation: imagePopoutEight 1.36s 1;
 }
-/* line 145, ../sass/partials/core.scss */
+/* line 147, ../sass/partials/core.scss */
 .indexSection ul li img.pop-nine {
   -moz-animation: imagePopoutNine 1.36s 1;
   -webkit-animation: imagePopoutNine 1.36s 1;
   animation: imagePopoutNine 1.36s 1;
 }
-/* line 147, ../sass/partials/core.scss */
+/* line 149, ../sass/partials/core.scss */
 .indexSection ul li figcaption {
   position: absolute;
   display: table;
@@ -872,7 +961,7 @@ h1, h2, h3, h4 {
   font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", sans-serif;
   font-weight: 200;
 }
-/* line 165, ../sass/partials/core.scss */
+/* line 167, ../sass/partials/core.scss */
 .indexSection ul li figcaption span {
   display: table-cell;
   vertical-align: middle;
@@ -886,11 +975,11 @@ h1, h2, h3, h4 {
     padding-bottom: 23.5%;
     margin: 0 2% 2% 0;
   }
-  /* line 177, ../sass/partials/core.scss */
+  /* line 179, ../sass/partials/core.scss */
   .indexSection ul li:nth-child(5n) {
     margin-right: 2%;
   }
-  /* line 180, ../sass/partials/core.scss */
+  /* line 182, ../sass/partials/core.scss */
   .indexSection ul li:nth-child(4n) {
     margin-right: 0;
   }
@@ -902,11 +991,11 @@ h1, h2, h3, h4 {
     padding-bottom: 32%;
     margin: 0 2% 2% 0;
   }
-  /* line 190, ../sass/partials/core.scss */
+  /* line 192, ../sass/partials/core.scss */
   .indexSection ul li:nth-child(5n) {
     margin-right: 2%;
   }
-  /* line 193, ../sass/partials/core.scss */
+  /* line 195, ../sass/partials/core.scss */
   .indexSection ul li:nth-child(3n) {
     margin-right: 0;
   }
@@ -918,16 +1007,16 @@ h1, h2, h3, h4 {
     padding-bottom: 47%;
     margin: 0 3% 3% 0;
   }
-  /* line 203, ../sass/partials/core.scss */
+  /* line 205, ../sass/partials/core.scss */
   .indexSection ul li:nth-child(5n) {
     margin-right: 3%;
   }
-  /* line 206, ../sass/partials/core.scss */
+  /* line 208, ../sass/partials/core.scss */
   .indexSection ul li:nth-child(2n) {
     margin-right: 0;
   }
 }
-/* line 213, ../sass/partials/core.scss */
+/* line 215, ../sass/partials/core.scss */
 .indexSection ul li:hover figcaption {
   top: 60%;
 }
