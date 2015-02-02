@@ -42,7 +42,8 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.static",
     "django.core.context_processors.tz",
     "django.contrib.messages.context_processors.messages",
-    "django.core.context_processors.request"
+    "django.core.context_processors.request",
+    "projects.context_processors.portfolio_settings",
 )
 
 DJANGO_APPS = (
@@ -118,6 +119,7 @@ if os.environ.get('DJANGO_PRODUCTION'):
     MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 
 else:
+    ENVIRONMENT = 'DEVELOPMENT'
     MEDIA_DIRECTORY = '/media/'
     STATIC_DIRECTORY = '/static/'
     MEDIA_URL = '/media/'
