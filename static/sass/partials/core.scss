@@ -148,29 +148,39 @@ h1, h2, h3, h4 {
       }
       figcaption {
         position: absolute;
-        display: table;
         left: 0;
         border: none;
         top: 100%;
         width: 101%;
-        height: 41%;
         line-height:1.3em;
         @include single-transition(top, .2s, ease-in-out, .1s);
         background-color: rgba($bgColor,.7);
         color: #fff;
         @include box-sizing(border-box);
-        padding: 0 5%;
+        padding: 0 5% 41%;
+        height: 0;
         font-family: $bodyFont;
-//        font-size: 95%;
-        font-weight:200;
-        
-        span {
-          display: table-cell;
-          vertical-align: middle;
-          border: none;
-          width: 100%;
+        font-weight: 200;
+
+        span.table-container{
+          height: 100%;
+          display: block;
+          position: absolute;
+          top: 0;
+
+          span.table {
+            display: table;
+            height: 100%;
+            width: 90%;
+
+            span.cell {
+              display: table-cell;
+              vertical-align: middle;
+              border: none;
+              height: 100%;
+            }
+          }
         }
-        
       }
       @media #{$mamaBear} {
         width: 23.5%;

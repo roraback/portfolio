@@ -940,12 +940,10 @@ h1, h2, h3, h4 {
 /* line 149, ../sass/partials/core.scss */
 .indexSection ul li figcaption {
   position: absolute;
-  display: table;
   left: 0;
   border: none;
   top: 100%;
   width: 101%;
-  height: 41%;
   line-height: 1.3em;
   -moz-transition: top 0.2s ease-in-out 0.1s;
   -o-transition: top 0.2s ease-in-out 0.1s;
@@ -957,16 +955,30 @@ h1, h2, h3, h4 {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 5%;
+  padding: 0 5% 41%;
+  height: 0;
   font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", sans-serif;
   font-weight: 200;
 }
-/* line 167, ../sass/partials/core.scss */
-.indexSection ul li figcaption span {
+/* line 165, ../sass/partials/core.scss */
+.indexSection ul li figcaption span.table-container {
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+}
+/* line 171, ../sass/partials/core.scss */
+.indexSection ul li figcaption span.table-container span.table {
+  display: table;
+  height: 100%;
+  width: 90%;
+}
+/* line 176, ../sass/partials/core.scss */
+.indexSection ul li figcaption span.table-container span.table span.cell {
   display: table-cell;
   vertical-align: middle;
   border: none;
-  width: 100%;
+  height: 100%;
 }
 @media screen and (max-width: 1023px) and (min-width: 768px) {
   /* line 115, ../sass/partials/core.scss */
@@ -975,11 +987,11 @@ h1, h2, h3, h4 {
     padding-bottom: 23.5%;
     margin: 0 2% 2% 0;
   }
-  /* line 179, ../sass/partials/core.scss */
+  /* line 189, ../sass/partials/core.scss */
   .indexSection ul li:nth-child(5n) {
     margin-right: 2%;
   }
-  /* line 182, ../sass/partials/core.scss */
+  /* line 192, ../sass/partials/core.scss */
   .indexSection ul li:nth-child(4n) {
     margin-right: 0;
   }
@@ -991,11 +1003,11 @@ h1, h2, h3, h4 {
     padding-bottom: 32%;
     margin: 0 2% 2% 0;
   }
-  /* line 192, ../sass/partials/core.scss */
+  /* line 202, ../sass/partials/core.scss */
   .indexSection ul li:nth-child(5n) {
     margin-right: 2%;
   }
-  /* line 195, ../sass/partials/core.scss */
+  /* line 205, ../sass/partials/core.scss */
   .indexSection ul li:nth-child(3n) {
     margin-right: 0;
   }
@@ -1007,16 +1019,16 @@ h1, h2, h3, h4 {
     padding-bottom: 47%;
     margin: 0 3% 3% 0;
   }
-  /* line 205, ../sass/partials/core.scss */
+  /* line 215, ../sass/partials/core.scss */
   .indexSection ul li:nth-child(5n) {
     margin-right: 3%;
   }
-  /* line 208, ../sass/partials/core.scss */
+  /* line 218, ../sass/partials/core.scss */
   .indexSection ul li:nth-child(2n) {
     margin-right: 0;
   }
 }
-/* line 215, ../sass/partials/core.scss */
+/* line 225, ../sass/partials/core.scss */
 .indexSection ul li:hover figcaption {
   top: 60%;
 }

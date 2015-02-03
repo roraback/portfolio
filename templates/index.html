@@ -11,7 +11,7 @@
 						<a href="{% url 'project' project.slug %}" title="{{ project.title }}">
 							<figure>
 								<img class="{{ randomPopOrder|random }}" src="{{ project.thumbnail.url }}" alt="{{ project.title }}" />
-								<figcaption><span>{{ project.title|safe }}</span></figcaption>
+								<figcaption><span class="table-container"><span class="table"><span class="cell">{{ project.title|safe }}</span></span></span></figcaption>
 							</figure>
 						</a>
 					</li>
