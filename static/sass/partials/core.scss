@@ -57,10 +57,9 @@ h1, h2, h3, h4 {
     position: relative;
     left:0;
     @include animation(textSlide .75s 1);
-  }
-  p {
     padding-bottom: .8em;
     text-indent: -2px;
+    z-index: -1;
   }
   .errors {
     color: $linkHover;
@@ -157,7 +156,7 @@ h1, h2, h3, h4 {
         background-color: rgba($bgColor,.7);
         color: #fff;
         @include box-sizing(border-box);
-        padding: 0 5% 41%;
+        padding: 0 0 41% 5%;
         height: 0;
         font-family: $bodyFont;
         font-weight: 200;
@@ -171,7 +170,7 @@ h1, h2, h3, h4 {
           span.table {
             display: table;
             height: 100%;
-            width: 90%;
+            width: 100%;
 
             span.cell {
               display: table-cell;
