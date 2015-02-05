@@ -5,7 +5,7 @@ from django.conf.urls.static import static
 from django.views.generic import RedirectView
 
 from django.conf import settings
-from projects.views import IndexView, ProjectView, AboutView, ContactView, SitemapView
+from projects.views import IndexView, ProjectView, AboutView, ContactView, SitemapView, BingView
 
 urlpatterns = patterns('',
     url(r'^$', IndexView.as_view(), name='home'),
@@ -17,6 +17,7 @@ urlpatterns = patterns('',
     url(r'^about/$', AboutView.as_view(), name='about'),
     url(r'^contact/$', ContactView.as_view(), name='contact'),
     url(r'^sitemap\.xml$', SitemapView.as_view(), name='sitemap'),
+    url(r'^BingSiteAuth\.xml$', BingView.as_view(), name='bing'),
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

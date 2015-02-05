@@ -106,4 +106,7 @@ class ContactView(TemplateView):
 
 class SitemapView(ListView):
     model = Project
-    template_name="sitemap.xml"
+    template_name ="xml/sitemap.xml"
+
+class BingView(TemplateView):
+    template_name = "xml/BingSiteAuth.xml"
