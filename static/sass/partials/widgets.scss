@@ -9,6 +9,7 @@
   top: 0;
   left:0;
   @include animation(imageSlide 1s 1);
+  z-index: 1000;
 
   @media #{$mamaBear}, #{$papaBear} {
     float: right;

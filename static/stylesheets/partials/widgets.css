@@ -9,6 +9,7 @@
   -moz-animation: imageSlide 1s 1;
   -webkit-animation: imageSlide 1s 1;
   animation: imageSlide 1s 1;
+  z-index: 1000;
 }
 @media screen and (max-width: 1023px) and (min-width: 768px), screen and (min-width: 1024px) {
   /* line 4, ../../sass/partials/widgets.scss */
@@ -18,7 +19,7 @@
     margin: 0 0 0 .8em;
   }
 }
-/* line 20, ../../sass/partials/widgets.scss */
+/* line 21, ../../sass/partials/widgets.scss */
 .slideshow.vertical-layout .left-bar, .slideshow.vertical-layout .right-bar {
   -moz-background-size: 35%, 16.8%;
   -o-background-size: 35%, 16.8%;
@@ -26,14 +27,14 @@
   background-size: 35%, 16.8%;
 }
 @media screen and (max-width: 500px) {
-  /* line 19, ../../sass/partials/widgets.scss */
+  /* line 20, ../../sass/partials/widgets.scss */
   .slideshow.vertical-layout {
     width: 90%;
     margin: .5em 0 .5em 0;
   }
 }
 @media screen and (max-width: 767px) and (min-width: 501px) {
-  /* line 19, ../../sass/partials/widgets.scss */
+  /* line 20, ../../sass/partials/widgets.scss */
   .slideshow.vertical-layout {
     width: 50%;
     float: right;
@@ -41,7 +42,7 @@
   }
 }
 @media screen and (max-width: 1023px) and (min-width: 768px), screen and (min-width: 1024px) {
-  /* line 19, ../../sass/partials/widgets.scss */
+  /* line 20, ../../sass/partials/widgets.scss */
   .slideshow.vertical-layout {
     width: 33%;
     float: right;
@@ -49,14 +50,14 @@
   }
 }
 @media screen and (min-width: 1400px) {
-  /* line 19, ../../sass/partials/widgets.scss */
+  /* line 20, ../../sass/partials/widgets.scss */
   .slideshow.vertical-layout {
     width: 25%;
     float: right;
     margin: 0 0 0 .8em;
   }
 }
-/* line 46, ../../sass/partials/widgets.scss */
+/* line 47, ../../sass/partials/widgets.scss */
 .slideshow .image-container {
   left: 0;
   position: relative;
@@ -66,19 +67,19 @@
   -webkit-transition: left 0.5s ease-in-out;
   transition: left 0.5s ease-in-out;
 }
-/* line 52, ../../sass/partials/widgets.scss */
+/* line 53, ../../sass/partials/widgets.scss */
 .slideshow .image-container figure {
   float: left;
   margin: 0;
   padding: 0;
 }
-/* line 57, ../../sass/partials/widgets.scss */
+/* line 58, ../../sass/partials/widgets.scss */
 .slideshow .image-container figure .content-wrapper {
   width: 100%;
   height: 0;
   position: relative;
 }
-/* line 62, ../../sass/partials/widgets.scss */
+/* line 63, ../../sass/partials/widgets.scss */
 .slideshow .image-container figure .content-wrapper img, .slideshow .image-container figure .content-wrapper iframe {
   width: 100%;
   height: 100%;
@@ -87,7 +88,7 @@
   left: 0;
   display: block;
 }
-/* line 71, ../../sass/partials/widgets.scss */
+/* line 72, ../../sass/partials/widgets.scss */
 .slideshow .image-container figure figcaption {
   font-weight: 300;
   line-height: 1.3em;
@@ -96,12 +97,12 @@
   font-weight: 600 !important;
 }
 @media screen and (max-width: 1023px) and (min-width: 768px), screen and (min-width: 1024px) {
-  /* line 71, ../../sass/partials/widgets.scss */
+  /* line 72, ../../sass/partials/widgets.scss */
   .slideshow .image-container figure figcaption {
     font-size: .9em;
   }
 }
-/* line 85, ../../sass/partials/widgets.scss */
+/* line 86, ../../sass/partials/widgets.scss */
 .slideshow .left-bar, .slideshow .right-bar {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
@@ -127,7 +128,7 @@
   background-repeat: no-repeat;
   cursor: pointer;
 }
-/* line 100, ../../sass/partials/widgets.scss */
+/* line 101, ../../sass/partials/widgets.scss */
 .slideshow .left-bar {
   left: -1px;
   background-image: url(../img/arrow-left.png);
@@ -136,7 +137,7 @@
   border-radius: 0 500px 500px 0;
   background-position: 35% center;
 }
-/* line 106, ../../sass/partials/widgets.scss */
+/* line 107, ../../sass/partials/widgets.scss */
 .slideshow .right-bar {
   right: -1px;
   background-image: url(../img/arrow-right.png);
@@ -145,7 +146,7 @@
   border-radius: 500px 0 0 500px;
   background-position: 59.7% center;
 }
-/* line 114, ../../sass/partials/widgets.scss */
+/* line 115, ../../sass/partials/widgets.scss */
 .slideshow:hover .left-bar, .slideshow:hover .right-bar {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
