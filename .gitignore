@@ -1,6 +1,5 @@
 *.pyc
 .sass-cache*
 
-media/projects/
-media/images/
-media/addenda/
+media/
+staticfiles/

@@ -31,6 +31,9 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 import os
 SETTINGS_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.abspath(os.path.join(SETTINGS_DIR, os.pardir))
+CKEDITOR_UPLOAD_PATH = "blog/"
+CKEDITOR_IMAGE_BACKEND = 'pillow'
+AWS_QUERYSTRING_AUTH = False
 
 # Application definition
 
@@ -57,6 +60,8 @@ DJANGO_APPS = (
 
 THIRD_PARTY_APPS = (
     'storages',
+    'ckeditor',
+    'ckeditor_uploader',
 )
 
 LOCAL_APPS = (

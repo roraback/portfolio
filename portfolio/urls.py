@@ -18,6 +18,7 @@ urlpatterns = patterns('',
     url(r'^contact/$', ContactView.as_view(), name='contact'),
     url(r'^sitemap\.xml$', SitemapView.as_view(), name='sitemap'),
     url(r'^BingSiteAuth\.xml$', BingView.as_view(), name='bing'),
+    url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 )
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
