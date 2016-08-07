@@ -9,6 +9,7 @@ class IndexView(ListView):
     model = Category
     template_name = 'index.html'
     
+    # Forward old URLs to correct views
     def dispatch(self, *args, **kwargs):
         if 'section' in self.request.GET:
             section = self.request.GET["section"]
