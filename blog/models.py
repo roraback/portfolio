@@ -15,6 +15,7 @@ class Article(models.Model):
     tags = models.ManyToManyField('BlogTag')
     slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)
     login_required = models.BooleanField(default=False)
+    published = models.BooleanField(default=False)
 
     def __unicode__(self):
         return self.title
