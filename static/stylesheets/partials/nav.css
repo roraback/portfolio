@@ -32,39 +32,40 @@ header, footer {
   margin-left: auto;
   margin-right: auto;
   clear: both;
+  margin-top: 1.5%;
 }
-/* line 30, ../../sass/partials/nav.scss */
+/* line 31, ../../sass/partials/nav.scss */
 header nav, footer nav {
   -moz-transition: font-size 1s ease-in-out;
   -o-transition: font-size 1s ease-in-out;
   -webkit-transition: font-size 1s ease-in-out;
   transition: font-size 1s ease-in-out;
 }
-/* line 31, ../../sass/partials/nav.scss */
+/* line 32, ../../sass/partials/nav.scss */
 header nav ul, footer nav ul {
   width: 99%;
   text-align: justify;
   margin: 0 auto -1em auto;
 }
-/* line 36, ../../sass/partials/nav.scss */
+/* line 37, ../../sass/partials/nav.scss */
 header nav ul:before, footer nav ul:before {
   content: '';
   display: block;
   width: 100%;
 }
-/* line 41, ../../sass/partials/nav.scss */
+/* line 42, ../../sass/partials/nav.scss */
 header nav ul:after, footer nav ul:after {
   content: '';
   display: inline-block;
   width: 100%;
 }
-/* line 46, ../../sass/partials/nav.scss */
+/* line 47, ../../sass/partials/nav.scss */
 header nav ul li, footer nav ul li {
   display: inline-block;
   margin: 0;
 }
 @media screen and (max-width: 767px) and (min-width: 501px), screen and (max-width: 500px) {
-  /* line 53, ../../sass/partials/nav.scss */
+  /* line 54, ../../sass/partials/nav.scss */
   header nav .siteTitle, footer nav .siteTitle {
     width: 100%;
     margin-bottom: 1em;
@@ -72,35 +73,34 @@ header nav ul li, footer nav ul li {
   }
 }
 @media screen and (max-width: 767px) and (min-width: 501px) {
-  /* line 60, ../../sass/partials/nav.scss */
+  /* line 61, ../../sass/partials/nav.scss */
   header nav ul li, footer nav ul li {
     float: left;
     margin-right: 10%;
   }
 }
 @media screen and (max-width: 500px) {
-  /* line 30, ../../sass/partials/nav.scss */
+  /* line 31, ../../sass/partials/nav.scss */
   header nav, footer nav {
     font-size: 95%;
   }
-  /* line 68, ../../sass/partials/nav.scss */
+  /* line 69, ../../sass/partials/nav.scss */
   header nav .siteTitle, footer nav .siteTitle {
     text-align: center;
   }
 }
 
-/* line 74, ../../sass/partials/nav.scss */
+/* line 75, ../../sass/partials/nav.scss */
 footer {
   padding-top: 1em;
 }
 
-/* line 77, ../../sass/partials/nav.scss */
+/* line 78, ../../sass/partials/nav.scss */
 .hedgebat-container {
   border: 2px solid #ff8f00;
 }
-/* line 80, ../../sass/partials/nav.scss */
+/* line 81, ../../sass/partials/nav.scss */
 header .hedgebat-container {
-  margin-top: 1.5%;
   margin-bottom: 1%;
 }
 /* line 84, ../../sass/partials/nav.scss */

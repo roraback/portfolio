@@ -18,26 +18,26 @@ h1, h2, h3, h4 {
 }
 
 /* line 17, ../../sass/partials/core.scss */
-#main {
+main {
   width: 92.72%;
   margin: 0 auto;
   clear: both;
 }
 /* line 22, ../../sass/partials/core.scss */
-#main a {
+main a {
   color: #ff8f00;
   text-decoration: none;
 }
 /* line 26, ../../sass/partials/core.scss */
-#main a:visited {
+main a:visited {
   color: #ffe080;
 }
 /* line 29, ../../sass/partials/core.scss */
-#main a:hover {
+main a:hover {
   color: #ff80d3;
 }
 /* line 32, ../../sass/partials/core.scss */
-#main h2 {
+main h2 {
   font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", sans-serif;
   font-weight: 300;
   font-size: 200%;
@@ -49,23 +49,23 @@ h1, h2, h3, h4 {
   animation: textSlide 0.75s 1;
 }
 /* line 41, ../../sass/partials/core.scss */
-#main h2.project-page {
+main h2.project-page {
   padding-top: .8em;
 }
 @media screen and (max-width: 500px) {
   /* line 41, ../../sass/partials/core.scss */
-  #main h2.project-page {
+  main h2.project-page {
     padding-top: .5em;
   }
 }
 @media screen and (max-width: 1023px) and (min-width: 768px), screen and (min-width: 1024px) {
   /* line 32, ../../sass/partials/core.scss */
-  #main h2 {
+  main h2 {
     margin-bottom: .3em;
   }
 }
 /* line 53, ../../sass/partials/core.scss */
-#main p {
+main p {
   font-weight: 300;
   font-size: 1.1em;
   line-height: 1.3em;
@@ -79,7 +79,7 @@ h1, h2, h3, h4 {
   z-index: 0;
 }
 /* line 64, ../../sass/partials/core.scss */
-#main .errors {
+main .errors {
   color: #ff80d3;
   height: 0;
   overflow: hidden;
@@ -92,19 +92,19 @@ h1, h2, h3, h4 {
   transition: height 0.5s ease-in-out;
 }
 /* line 73, ../../sass/partials/core.scss */
-#main form {
+main form {
   width: 100%;
   height: auto;
   min-height: 170px;
 }
 @media screen and (max-width: 500px) {
   /* line 73, ../../sass/partials/core.scss */
-  #main form {
+  main form {
     min-height: 150px;
   }
 }
 /* line 81, ../../sass/partials/core.scss */
-#main form label, #main form input {
+main form label, main form input {
   float: left;
   margin-bottom: .5em;
   font-size: 1.2em;
@@ -113,14 +113,14 @@ h1, h2, h3, h4 {
   font-weight: 300;
 }
 /* line 89, ../../sass/partials/core.scss */
-#main form label {
+main form label {
   clear: both;
   min-width: 10%;
   margin-right: 10px;
   margin-top: .1em;
 }
 /* line 95, ../../sass/partials/core.scss */
-#main form input[type="submit"] {
+main form input[type="submit"] {
   display: block;
   clear: both;
   font-size: 1em;
@@ -130,7 +130,7 @@ h1, h2, h3, h4 {
   color: #fff;
 }
 /* line 104, ../../sass/partials/core.scss */
-#main form input[type="text"], #main form input[type="password"] {
+main form input[type="text"], main form input[type="password"] {
   font-weight: 500;
   padding: 0 .3em;
 }

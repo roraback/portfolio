@@ -29,13 +29,13 @@
         <![endif]-->
 
 		<header>
+			{% block header_image %}
 			<div class="hedgebat-container">
 				<a href="{% url 'home' %}" title="Kenneth Roraback - Home">
-					<div class="hedgebat">
-						{# <span>Mobile - Web - User Experience - Interaction - Design - Development - Frontend - Backend - APIs - Branding - Type - Video - Theater - Architecture</span> #}
-					</div>
+					<div class="hedgebat"></div>
 				</a>
 			</div>
+			{% endblock %}
 			<nav>
 				<ul>
 					<li class="siteTitle"><h1><a href="{% url 'home' %}" title="Kenneth Roraback - Home"><span class="secret">'</span>Kenneth Roraback<span class="secret">'</span><mark>=&gt;</mark><span class="secret">'</span>The Stories I Tell<span class="secret">'</span></a></h1></li>
@@ -46,9 +46,9 @@
 				</ul>
 			</nav>
 		</header>
-
+		<main>
 {% block content %}{% endblock %}
-
+		</main>
 		<footer>
 			<nav>
 				<ul>
@@ -59,11 +59,13 @@
 					<li><h2><a href="{% random_project %}" title="random project"><mark>Get lucky!&nbsp;</mark></a></h2></li>
 				</ul>
 			</nav>
+			{% block footer_image %}
 			<div class="hedgebat-container">
 				<a href="{% url 'home' %}" title="Kenneth Roraback - Home">
 					<div class="hedgebat"></div>
 				</a>
 			</div>
+			{% endblock %}
 		</footer>
 
 
