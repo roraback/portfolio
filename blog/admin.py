@@ -7,7 +7,7 @@ class BlogTagInline(admin.TabularInline):
 
 class ArticleAdmin(admin.ModelAdmin):
     filter_vertical = ('tags',)
-    list_display = ('title', 'category', 'posted', 'login_required')
+    list_display = ('title', 'category', 'posted', 'login_required', 'published')
     exclude = ('slug',)
 
 class BlogCategoryAdmin(admin.ModelAdmin):

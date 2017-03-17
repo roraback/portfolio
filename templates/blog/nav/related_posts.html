@@ -1,0 +1,14 @@
+<h3>More From {{ current_article.category}}</h3>
+<ul>
+{% for article in articles_by_category %}
+	<li><a href="{% url 'article' article.category.slug article.slug %}">{{ article.title }}</a></li>
+{% endfor %}
+</ul>
+{% if articles_by_tag %}
+	<h3>Similar Articles</h3>
+	<ul>
+	{% for article in articles_by_tag %}
+		<li><a href="{% url 'article' article.category.slug article.slug %}">{{ article.title }}</a></li>
+	{% endfor %}
+	</ul>
+{% endif %}

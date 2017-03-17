@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block header_image %}{% endblock %}
+{% block content %}
+	{% block related_posts_block %}
+		{% load tags %}
+		{% related_posts article %}
+	{% endblock %}
+<section>
+	{{ article.body | safe }}
+</section>
+{% endblock %}
+{% block footer_image %}{% endblock %}

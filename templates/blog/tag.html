@@ -1,0 +1,15 @@
+{% extends "blog/base.html" %}
+{% block content %}
+	<section class="blog-main">
+		<h2>{{ blogtag.title }}</h2>
+
+		{% for article in blogtag.article_set.all %}
+			<a href="{% url 'article' blogtag.slug article.slug %}">
+				<article>
+					<h3>{{ article.title }}</h3>
+					<p>{{ article.body | striptags | truncatewords:50 }}</p>
+				</article>
+			</a>
+		{% endfor %}
+	</section>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block header_image %}{% endblock %}
+{% block blog_nav %}
+	{% load tags %}
+	<nav>
+		{% block related_posts_block %}{% endblock %}
+		{% blog_categories %}
+		{% blog_tags %}
+	</nav>
+{% endblock %}
+{% block footer_image %}{% endblock %}

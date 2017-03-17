@@ -1,0 +1,16 @@
+{% extends "blog/base.html" %}
+{% block header_image %}{% endblock %}
+{% block content %}
+	<section class="blog-main">
+		<h2>Recent Posts</h2>
+		{% for article in article_list %}
+			<a href="{% url 'article' article.category.slug article.slug %}">
+				<article>
+					<h3>{{ article.title }}</h3>
+					<p>{{ article.body | striptags | truncatewords:50 }}</p>
+				</article>
+			</a>
+		{% endfor %}
+	</section>
+{% endblock %}
+{% block footer_image %}{% endblock %}

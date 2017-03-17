@@ -6,6 +6,7 @@ from django.views.generic import RedirectView
 
 from django.conf import settings
 from projects.views import IndexView, ProjectView, AboutView, ContactView, SitemapView, BingView
+from blog.views import ArticleView, ArticleListView, BlogTagView, BlogCategoryView, BlogIndexView
 
 urlpatterns = patterns('',
     url(r'^$', IndexView.as_view(), name='home'),
@@ -18,6 +19,10 @@ urlpatterns = patterns('',
     url(r'^contact/$', ContactView.as_view(), name='contact'),
     url(r'^sitemap\.xml$', SitemapView.as_view(), name='sitemap'),
     url(r'^BingSiteAuth\.xml$', BingView.as_view(), name='bing'),
+    url(r'^blog/$', BlogIndexView.as_view(), name='article_list'),
+    url(r'^blog/articles/(?P<category_slug>[A-Za-z0-9_\-]+)/(?P<slug>[A-Za-z0-9_\-]+)/$', ArticleView.as_view(), name='article'),
+    url(r'^blog/categories/(?P<slug>[A-Za-z0-9_\-]+)/$', BlogCategoryView.as_view(), name='category'),
+    url(r'^blog/tags/(?P<slug>[A-Za-z0-9_\-]+)/$', BlogTagView.as_view(), name='tag'),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 )
 
