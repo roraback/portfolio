@@ -1,5 +1,6 @@
 *.pyc
 .sass-cache*
+*.DS_Store
 
 media/
 staticfiles/
