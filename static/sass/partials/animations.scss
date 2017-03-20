@@ -3,76 +3,76 @@
 
 //Slide from right
 @include keyframes(imageSlide) {
-  0%    {left: 50px; @include opacity(0);}
-  100%  {left: 0; @include opacity(1);}
+  0%    { @include transform(translate3d(50px,0,0)); @include opacity(0); }
+  100%  { @include transform(translate3d(0,0,0)); @include opacity(1); }
 }
 
 //Slide from left
 @include keyframes(textSlide) {
-  0%    {left: -50px; opacity: 0;}
-  100%  {left: 0; opacity: 100%;}
+  0%    { @include transform(translate3d(-50px,0,0)); @include opacity(0); }
+  100%  { @include transform(translate3d(0,0,0)); @include opacity(1); }
 }
 
 //Homepage imagePopout
 @include keyframes(imagePopoutZero) {
-  0%    {width: 2%; @include opacity(0); margin: -1% 0 0 -1%;}
-  97%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+  0%   { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  97%  { @include transform(scale3d(1,1,1)); @include opacity(1); }
 }
 @include keyframes(imagePopoutOne) {
-  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  3%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+  0%   { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  3%   { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  100% { @include transform(scale3d(1,1,1)); @include opacity(1); }
 }
 @include keyframes(imagePopoutTwo) {
-  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  6%  {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+  0%   { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  6%   { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  100% { @include transform(scale3d(1,1,1)); @include opacity(1); }
 }
 @include keyframes(imagePopoutThree) {
-  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  9%  {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+  0%   { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  9%   { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  100% { @include transform(scale3d(1,1,1)); @include opacity(1); }
 }
 @include keyframes(imagePopoutFour) {
-  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  12% {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+  0%   { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  12%  { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  100% { @include transform(scale3d(1,1,1)); @include opacity(1); }
 }
 @include keyframes(imagePopoutFive) {
-  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  15% {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+  0%   { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  15%  { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  100% { @include transform(scale3d(1,1,1)); @include opacity(1); }
 }
 @include keyframes(imagePopoutSix) {
-  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  18% {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+  0%   { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  18%  { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  100% { @include transform(scale3d(1,1,1)); @include opacity(1); }
 }
 @include keyframes(imagePopoutSeven) {
-  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  21% {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+  0%   { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  21%  { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  100% { @include transform(scale3d(1,1,1)); @include opacity(1); }
 }
 @include keyframes(imagePopoutEight) {
-  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  24% {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+  0%   { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  24%  { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  100% { @include transform(scale3d(1,1,1)); @include opacity(1); }
 }
 @include keyframes(imagePopoutNine) {
-  0%    {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  26% {width: 0%; @include opacity(0); margin: 0 0 0 0;}
-  100%  {width: 100%; @include opacity(1); margin: -50% 0 0 -50%;}
+  0%   { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  26%  { @include transform(scale3d(0,0,1)); @include opacity(0); }
+  100% { @include transform(scale3d(1,1,1)); @include opacity(1); }
 }
 
 //Image bounce on homepage - hover effect
 @include keyframes(imageBounce) {
-  0%  {top:0;}
-  13% {top:-15px;}
-  25% {top:0;}
-  38% {top:7px;}
-  50% {top:0;}
-  63% {top:3px;}
-  75% {top:0;}
-  88% {top:1px;}
-  100% {top:0;}
+  0%   { @include transform(translate3d(0,0,0)); }
+  13%  { @include transform(translate3d(0,-15px,0)); }
+  25%  { @include transform(translate3d(0,0,0)); }
+  38%  { @include transform(translate3d(0,-7px,0)); }
+  50%  { @include transform(translate3d(0,0,0)); }
+  63%  { @include transform(translate3d(0,-3px,0)); }
+  75%  { @include transform(translate3d(0,0,0)); }
+  88%  { @include transform(translate3d(0,-1px,0)); }
+  100% { @include transform(translate3d(0,0,0)); }
 }
