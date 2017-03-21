@@ -5,7 +5,6 @@ $(function() {
 		var divWidth = $(".image-container").parent().width();
 		var numImages = $(".image-container figure").length - 1;
 		var slideIndex = Math.round(parseInt(position,10) / divWidth * -1);
-        console.log(position, slideIndex);
 		if ($(this).hasClass("right-bar")) {
 		    if (slideIndex < numImages){
     		    var newSlideIndex = ++slideIndex;
@@ -20,7 +19,6 @@ $(function() {
 		    }
 		}
 		var newPosition = newSlideIndex * (-100);
-        console.log(newPosition, newSlideIndex);
         $(".image-container").css("left", newPosition + "%");
     });
     function slideResize () {
