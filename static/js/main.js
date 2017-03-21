@@ -28,7 +28,7 @@ $(function() {
         if ($(".slideshow").hasClass("vertical-layout")) {
             proportionedHeight = currentWidth * percentageHeight / 600;
             $(".left-bar, .right-bar").css({"height": proportionedHeight + "px", "margin-top": proportionedHeight * 2.5 + "px", "width": proportionedHeight/2 + "px"});
-        } else {
+        } else if (currentWidth) {
             proportionedHeight = currentWidth * percentageHeight / 300;
             $(".left-bar, .right-bar").css({"height": proportionedHeight + "px", "margin-top": proportionedHeight + "px", "width": proportionedHeight/2 + "px"});
         }
