@@ -1,8 +1,13 @@
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User, Group
 from django.views.generic import ListView, DetailView, TemplateView
 from django.http import HttpResponse, HttpResponsePermanentRedirect
 from django.core.urlresolvers import reverse
 
+from rest_framework import viewsets, generics
+
+from projects.serializers import UserSerializer, ProjectSerializer, ProjectPreviewSerializer, CategorySerializer
+from projects.permissions import ReadOnly
 from projects.models import Category, Project
 
 class IndexView(ListView):
@@ -111,3 +116,23 @@ class SitemapView(ListView):
 
 class BingView(TemplateView):
     template_name = "xml/BingSiteAuth.xml"
+
+# API Views
+class ProjectViewSet(viewsets.ModelViewSet):
+    queryset = Project.objects.all()
+    serializer_class = ProjectSerializer
+    permission_classes = (ReadOnly,)
+    
+    def get_queryset(self):
+        # Return all projects if user is logged in. Only return public projects, otherwise.
+        if self.request.user and self.request.user.is_authenticated():
+             return Project.objects.all()
+        else:
+            return Project.objects.filter(login_required=False)
+
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
+    permission_classes = (ReadOnly,)
+
+

@@ -3,16 +3,16 @@ from django.contrib import admin
 from django.core.urlresolvers import reverse
 from django.conf.urls.static import static
 from django.views.generic import RedirectView
-
 from django.conf import settings
-from projects.views import IndexView, ProjectView, AboutView, ContactView, SitemapView, BingView
+
+from rest_framework import routers
+
+from projects.views import IndexView, ProjectView, AboutView, ContactView, SitemapView, BingView, ProjectViewSet, CategoryViewSet #, UserViewSet
 from blog.views import ArticleView, ArticleListView, BlogTagView, BlogCategoryView, BlogIndexView
+
 
 urlpatterns = patterns('',
     url(r'^$', IndexView.as_view(), name='home'),
-    # url(r'^blog/', include('blog.urls')),
-
-
     url(r'^admin/', include(admin.site.urls)),
     url(r'^projects/(?P<slug>[A-Za-z0-9_\-]+)/$', ProjectView.as_view(), name='project'),
     url(r'^about/$', AboutView.as_view(), name='about'),
@@ -25,6 +25,12 @@ urlpatterns = patterns('',
     # url(r'^blog/tags/(?P<slug>[A-Za-z0-9_\-]+)/$', BlogTagView.as_view(), name='tag'),
     url(r'^ckeditor/', include('ckeditor_uploader.urls')),
 )
+
+router = routers.DefaultRouter()
+router.register(r'api/projects', ProjectViewSet)
+router.register(r'api/categories', CategoryViewSet)
+
+urlpatterns += router.urls
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

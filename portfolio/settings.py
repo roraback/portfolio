@@ -62,6 +62,7 @@ THIRD_PARTY_APPS = (
     'storages',
     'ckeditor',
     'ckeditor_uploader',
+    'rest_framework',
 )
 
 LOCAL_APPS = (
