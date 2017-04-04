@@ -25,15 +25,15 @@ import dj_database_url
 DATABASES = {}
 DATABASES['default'] = dj_database_url.config(default='postgres://127.0.0.1:5432/kennethroraback')
 
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
-
-
 import os
 SETTINGS_DIR = os.path.dirname(os.path.abspath(__file__))
 BASE_DIR = os.path.abspath(os.path.join(SETTINGS_DIR, os.pardir))
 CKEDITOR_UPLOAD_PATH = "blog/"
 CKEDITOR_IMAGE_BACKEND = 'pillow'
 AWS_QUERYSTRING_AUTH = False
+
+# For Heroku SSL compatibility
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Application definition
 
@@ -73,6 +73,7 @@ LOCAL_APPS = (
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 MIDDLEWARE_CLASSES = (
+    'portfolio.middleware.EnsureHttpsMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -113,7 +114,8 @@ if os.environ.get('DJANGO_PRODUCTION'):
     DEBUG = False
     DEFAULT_FILE_STORAGE = 'portfolio.s3utils.MediaS3BotoStorage'
     STATICFILES_STORAGE = 'portfolio.s3utils.StaticS3BotoStorage'
-    ALLOWED_HOSTS = ['*']
+    HEROKU_APP_ADDRESS = os.environ.get('HEROKU_APP_ADDRESS')
+    ALLOWED_HOSTS = ['.kennethroraback.com', HEROKU_APP_ADDRESS]
 
     AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_BUCKET', 'kennethroraback')
     S3_URL = 'https://%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
@@ -124,6 +126,9 @@ if os.environ.get('DJANGO_PRODUCTION'):
     STATIC_URL = S3_URL + STATIC_DIRECTORY
     MEDIA_URL = S3_URL + MEDIA_DIRECTORY
     MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+    # send cookies only via HTTPS
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
 
 else:
     ENVIRONMENT = 'DEVELOPMENT'
