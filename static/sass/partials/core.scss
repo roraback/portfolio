@@ -113,17 +113,13 @@ main {
     
     li {
       float: left;
-      width: 19%;
       height: 0;
-      padding-bottom: 19%;
-      margin: 0 1.25% 1.25% 0;
       position: relative;
       overflow: hidden;
-      &:nth-child(5n) {
-        margin-right: 0;
-      }
+      @include transition(transform .3s ease-in-out, box-shadow .3s ease-in-out, width .2s ease-in-out, padding-bottom .2s ease-in-out);
       &:hover {
-        @include animation(imageBounce .8s 1);
+        @include transform3d(scale3d(1.08, 1.08, 1));
+        @include box-shadow(1px 2px 6px 1px rgba(0, 0, 0, .25));
       }
 
       img {
@@ -181,13 +177,44 @@ main {
           }
         }
       }
+      @media #{$papaBear} {
+        width: 19%;
+        padding-bottom: 19%;
+        margin: 0 1.25% 1.25% 0;
+        &:nth-child(5n) {
+          margin-right: 0;
+        }
+      }
+      @media #{$grandmaBear} {
+        width: 15.83%;
+        padding-bottom: 15.83%;
+        margin: 0 1% 1% 0;
+        &:nth-child(5n) {
+          margin-right: 1%;
+        }
+        &:nth-child(6n) {
+          margin-right: 0;
+        }
+      }
+      @media #{$grandpaBear} {
+        width: 11.9%;
+        padding-bottom: 11.9%;
+        margin: 0 .6857% .6857% 0;
+        &:nth-child(5n) {
+          margin-right: .6857%;
+        }
+        &:nth-child(6n) {
+          margin-right: .6857%;
+        }
+        &:nth-child(8n) {
+          margin-right: 0;
+        }
+      }
+
       @media #{$mamaBear} {
         width: 23.5%;
         padding-bottom: 23.5%;
         margin: 0 2% 2% 0;
-        &:nth-child(5n) {
-          margin-right: 2%;
-        }
         &:nth-child(4n) {
           margin-right: 0;
         }
@@ -198,9 +225,6 @@ main {
         padding-bottom: 32%;
         margin: 0 2% 2% 0;
         
-        &:nth-child(5n) {
-          margin-right: 2%;
-        }
         &:nth-child(3n) {
           margin-right: 0;
         }
@@ -211,9 +235,6 @@ main {
         padding-bottom: 47%;
         margin: 0 3% 3% 0;
         
-        &:nth-child(5n) {
-          margin-right: 3%;
-        }
         &:nth-child(2n) {
           margin-right: 0;
         }
