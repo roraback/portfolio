@@ -111,16 +111,16 @@ footer .hedgebat-container {
 
 /* line 90, ../../sass/partials/nav.scss */
 .hedgebat {
-  background: transparent url(../img/hedgebat.jpg) top center no-repeat;
+  background: transparent url(../img/hedgebat.jpg) center 5% no-repeat;
   background-size: cover;
   width: 98%;
   margin: 1% auto;
   height: 0;
   padding-bottom: 20%;
-  -moz-transition: padding-bottom 1s ease-in-out;
-  -o-transition: padding-bottom 1s ease-in-out;
-  -webkit-transition: padding-bottom 1s ease-in-out;
-  transition: padding-bottom 1s ease-in-out;
+  -moz-transition: padding-bottom 1s ease-in-out, background-position 1s ease-in-out;
+  -o-transition: padding-bottom 1s ease-in-out, background-position 1s ease-in-out;
+  -webkit-transition: padding-bottom 1s ease-in-out, background-position 1s ease-in-out;
+  transition: padding-bottom 1s ease-in-out, background-position 1s ease-in-out;
 }
 @media screen and (max-width: 1023px) and (min-width: 768px) {
   /* line 90, ../../sass/partials/nav.scss */
@@ -131,16 +131,32 @@ footer .hedgebat-container {
 @media screen and (min-width: 1024px) {
   /* line 90, ../../sass/partials/nav.scss */
   .hedgebat {
-    padding-bottom: 16%;
+    padding-bottom: 15%;
+    background-position: center 6%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 90, ../../sass/partials/nav.scss */
+  .hedgebat {
+    padding-bottom: 13%;
+    background-position: center 8%;
   }
 }
 @media screen and (min-width: 1400px) {
   /* line 90, ../../sass/partials/nav.scss */
   .hedgebat {
-    padding-bottom: 14%;
+    padding-bottom: 12%;
+    background-position: center 12.5%;
   }
 }
-/* line 107, ../../sass/partials/nav.scss */
+@media screen and (min-width: 1800px) {
+  /* line 90, ../../sass/partials/nav.scss */
+  .hedgebat {
+    padding-bottom: 10%;
+    background-position: center 14.5%;
+  }
+}
+/* line 117, ../../sass/partials/nav.scss */
 footer .hedgebat {
   background-position: center bottom;
 }

@@ -88,21 +88,31 @@ footer {
 }
 
 .hedgebat {
-  background: transparent url(../img/hedgebat.jpg) top center no-repeat;
+  background: transparent url(../img/hedgebat.jpg) center 5% no-repeat;
   background-size: cover;
   width: 98%;
   margin: 1% auto;
   height: 0;
   padding-bottom: 20%;
-  @include single-transition(padding-bottom, 1s, ease-in-out);
+  @include transition(padding-bottom 1s ease-in-out, background-position 1s ease-in-out);
   @media #{$mamaBear} {
     padding-bottom: 18%;
   }
   @media #{$papaBear} {
-    padding-bottom: 16%;
+    padding-bottom: 15%;
+    background-position: center 6%;
+  }
+  @media #{$uncleBear} {
+    padding-bottom: 13%;
+    background-position: center 8%;
   }
   @media #{$grandmaBear} {
-    padding-bottom: 14%;
+    padding-bottom: 12%;
+    background-position: center 12.5%;
+  }
+  @media #{$grandpaBear} {
+    padding-bottom: 10%;
+    background-position: center 14.5%;
   }
   footer & {
     background-position: center bottom;
