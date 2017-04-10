@@ -87,27 +87,34 @@
     @include opacity(0);
     @include single-transition(opacity, 0.1s, ease-in);
     @include single-transition(opacity, 0.5s, ease-out);
-    min-width: 10%;
+    width: 12%;
+    max-width: 75px;
     overflow: hidden;
-    height: 400px;
+    height: 0;
+    padding-bottom: 24%;
     background-color: rgba($bgColor,.5);
     position: absolute;
-    top: 0;
+    top: 50%;
     z-index: 100;
     @include background-size(25%,12%);
     background-repeat: no-repeat;
     cursor: pointer;
+    @include transform(translateY(-50%));
+    @media #{$papaBear} {
+      padding-bottom: 150px;
+    }
   }
   .left-bar {
     left: -1px;
     background-image: url(../img/arrow-left.png);
-    @include border-radius(0 500px 500px 0);
+    @include border-radius(0 150px 150px 0);
     background-position: 35% center;
+    
   }
   .right-bar {
     right: -1px;
     background-image: url(../img/arrow-right.png);
-    @include border-radius(500px 0 0 500px);
+    @include border-radius(150px 0 0 150px);
     background-position: 59.7% center;
   }
   

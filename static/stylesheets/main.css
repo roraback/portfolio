@@ -972,24 +972,24 @@ main form input[type="text"], main form input[type="password"] {
 /* line 114, ../sass/partials/core.scss */
 .indexSection ul li {
   float: left;
-  width: 19%;
   height: 0;
-  padding-bottom: 19%;
-  margin: 0 1.25% 1.25% 0;
   position: relative;
   overflow: hidden;
+  -moz-transition: -moz-transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, width 0.2s ease-in-out, padding-bottom 0.2s ease-in-out;
+  -o-transition: -o-transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, width 0.2s ease-in-out, padding-bottom 0.2s ease-in-out;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, width 0.2s ease-in-out, padding-bottom 0.2s ease-in-out;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, width 0.2s ease-in-out, padding-bottom 0.2s ease-in-out;
 }
-/* line 122, ../sass/partials/core.scss */
-.indexSection ul li:nth-child(5n) {
-  margin-right: 0;
+/* line 120, ../sass/partials/core.scss */
+.indexSection ul li:hover {
+  -moz-transform: scale3d(1.08, 1.08, 1);
+  -webkit-transform: scale3d(1.08, 1.08, 1);
+  transform: scale3d(1.08, 1.08, 1);
+  -moz-box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 1px 2px 6px 1px rgba(0, 0, 0, 0.25);
 }
 /* line 125, ../sass/partials/core.scss */
-.indexSection ul li:hover {
-  -moz-animation: imageBounce 0.8s 1;
-  -webkit-animation: imageBounce 0.8s 1;
-  animation: imageBounce 0.8s 1;
-}
-/* line 129, ../sass/partials/core.scss */
 .indexSection ul li img {
   width: 100%;
   height: auto;
@@ -998,67 +998,67 @@ main form input[type="text"], main form input[type="password"] {
   left: 50%;
   margin: -50% 0 0 -50%;
 }
-/* line 137, ../sass/partials/core.scss */
+/* line 133, ../sass/partials/core.scss */
 .indexSection ul li img.pop-zero {
   -moz-animation: imagePopoutZero 1.36s 1;
   -webkit-animation: imagePopoutZero 1.36s 1;
   animation: imagePopoutZero 1.36s 1;
 }
-/* line 138, ../sass/partials/core.scss */
+/* line 134, ../sass/partials/core.scss */
 .indexSection ul li img.pop-one {
   -moz-animation: imagePopoutOne 1.36s 1;
   -webkit-animation: imagePopoutOne 1.36s 1;
   animation: imagePopoutOne 1.36s 1;
 }
-/* line 139, ../sass/partials/core.scss */
+/* line 135, ../sass/partials/core.scss */
 .indexSection ul li img.pop-two {
   -moz-animation: imagePopoutTwo 1.36s 1;
   -webkit-animation: imagePopoutTwo 1.36s 1;
   animation: imagePopoutTwo 1.36s 1;
 }
-/* line 140, ../sass/partials/core.scss */
+/* line 136, ../sass/partials/core.scss */
 .indexSection ul li img.pop-three {
   -moz-animation: imagePopoutThree 1.36s 1;
   -webkit-animation: imagePopoutThree 1.36s 1;
   animation: imagePopoutThree 1.36s 1;
 }
-/* line 141, ../sass/partials/core.scss */
+/* line 137, ../sass/partials/core.scss */
 .indexSection ul li img.pop-four {
   -moz-animation: imagePopoutFour 1.36s 1;
   -webkit-animation: imagePopoutFour 1.36s 1;
   animation: imagePopoutFour 1.36s 1;
 }
-/* line 142, ../sass/partials/core.scss */
+/* line 138, ../sass/partials/core.scss */
 .indexSection ul li img.pop-five {
   -moz-animation: imagePopoutFive 1.36s 1;
   -webkit-animation: imagePopoutFive 1.36s 1;
   animation: imagePopoutFive 1.36s 1;
 }
-/* line 143, ../sass/partials/core.scss */
+/* line 139, ../sass/partials/core.scss */
 .indexSection ul li img.pop-six {
   -moz-animation: imagePopoutSix 1.36s 1;
   -webkit-animation: imagePopoutSix 1.36s 1;
   animation: imagePopoutSix 1.36s 1;
 }
-/* line 144, ../sass/partials/core.scss */
+/* line 140, ../sass/partials/core.scss */
 .indexSection ul li img.pop-seven {
   -moz-animation: imagePopoutSeven 1.36s 1;
   -webkit-animation: imagePopoutSeven 1.36s 1;
   animation: imagePopoutSeven 1.36s 1;
 }
-/* line 145, ../sass/partials/core.scss */
+/* line 141, ../sass/partials/core.scss */
 .indexSection ul li img.pop-eight {
   -moz-animation: imagePopoutEight 1.36s 1;
   -webkit-animation: imagePopoutEight 1.36s 1;
   animation: imagePopoutEight 1.36s 1;
 }
-/* line 146, ../sass/partials/core.scss */
+/* line 142, ../sass/partials/core.scss */
 .indexSection ul li img.pop-nine {
   -moz-animation: imagePopoutNine 1.36s 1;
   -webkit-animation: imagePopoutNine 1.36s 1;
   animation: imagePopoutNine 1.36s 1;
 }
-/* line 148, ../sass/partials/core.scss */
+/* line 144, ../sass/partials/core.scss */
 .indexSection ul li figcaption {
   position: absolute;
   left: 0;
@@ -1081,25 +1081,73 @@ main form input[type="text"], main form input[type="password"] {
   font-family: "ff-dagny-web-pro-1", "ff-dagny-web-pro-2", sans-serif;
   font-weight: 200;
 }
-/* line 164, ../sass/partials/core.scss */
+/* line 160, ../sass/partials/core.scss */
 .indexSection ul li figcaption span.table-container {
   height: 100%;
   display: block;
   position: absolute;
   top: 0;
 }
-/* line 170, ../sass/partials/core.scss */
+/* line 166, ../sass/partials/core.scss */
 .indexSection ul li figcaption span.table-container span.table {
   display: table;
   height: 100%;
   width: 100%;
 }
-/* line 175, ../sass/partials/core.scss */
+/* line 171, ../sass/partials/core.scss */
 .indexSection ul li figcaption span.table-container span.table span.cell {
   display: table-cell;
   vertical-align: middle;
   border: none;
   height: 100%;
+}
+@media screen and (min-width: 1024px) {
+  /* line 114, ../sass/partials/core.scss */
+  .indexSection ul li {
+    width: 19%;
+    padding-bottom: 19%;
+    margin: 0 1.25% 1.25% 0;
+  }
+  /* line 184, ../sass/partials/core.scss */
+  .indexSection ul li:nth-child(5n) {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1400px) {
+  /* line 114, ../sass/partials/core.scss */
+  .indexSection ul li {
+    width: 15.83%;
+    padding-bottom: 15.83%;
+    margin: 0 1% 1% 0;
+  }
+  /* line 192, ../sass/partials/core.scss */
+  .indexSection ul li:nth-child(5n) {
+    margin-right: 1%;
+  }
+  /* line 195, ../sass/partials/core.scss */
+  .indexSection ul li:nth-child(6n) {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1800px) {
+  /* line 114, ../sass/partials/core.scss */
+  .indexSection ul li {
+    width: 11.9%;
+    padding-bottom: 11.9%;
+    margin: 0 .6857% .6857% 0;
+  }
+  /* line 203, ../sass/partials/core.scss */
+  .indexSection ul li:nth-child(5n) {
+    margin-right: .6857%;
+  }
+  /* line 206, ../sass/partials/core.scss */
+  .indexSection ul li:nth-child(6n) {
+    margin-right: .6857%;
+  }
+  /* line 209, ../sass/partials/core.scss */
+  .indexSection ul li:nth-child(8n) {
+    margin-right: 0;
+  }
 }
 @media screen and (max-width: 1023px) and (min-width: 768px) {
   /* line 114, ../sass/partials/core.scss */
@@ -1108,11 +1156,7 @@ main form input[type="text"], main form input[type="password"] {
     padding-bottom: 23.5%;
     margin: 0 2% 2% 0;
   }
-  /* line 188, ../sass/partials/core.scss */
-  .indexSection ul li:nth-child(5n) {
-    margin-right: 2%;
-  }
-  /* line 191, ../sass/partials/core.scss */
+  /* line 218, ../sass/partials/core.scss */
   .indexSection ul li:nth-child(4n) {
     margin-right: 0;
   }
@@ -1124,11 +1168,7 @@ main form input[type="text"], main form input[type="password"] {
     padding-bottom: 32%;
     margin: 0 2% 2% 0;
   }
-  /* line 201, ../sass/partials/core.scss */
-  .indexSection ul li:nth-child(5n) {
-    margin-right: 2%;
-  }
-  /* line 204, ../sass/partials/core.scss */
+  /* line 228, ../sass/partials/core.scss */
   .indexSection ul li:nth-child(3n) {
     margin-right: 0;
   }
@@ -1140,16 +1180,12 @@ main form input[type="text"], main form input[type="password"] {
     padding-bottom: 47%;
     margin: 0 3% 3% 0;
   }
-  /* line 214, ../sass/partials/core.scss */
-  .indexSection ul li:nth-child(5n) {
-    margin-right: 3%;
-  }
-  /* line 217, ../sass/partials/core.scss */
+  /* line 238, ../sass/partials/core.scss */
   .indexSection ul li:nth-child(2n) {
     margin-right: 0;
   }
 }
-/* line 224, ../sass/partials/core.scss */
+/* line 245, ../sass/partials/core.scss */
 .indexSection ul li:hover figcaption {
   top: 60%;
 }
@@ -1270,12 +1306,14 @@ main form input[type="text"], main form input[type="password"] {
   -o-transition: opacity 0.5s ease-out;
   -webkit-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
-  min-width: 10%;
+  width: 12%;
+  max-width: 75px;
   overflow: hidden;
-  height: 400px;
+  height: 0;
+  padding-bottom: 24%;
   background-color: rgba(0, 34, 64, 0.5);
   position: absolute;
-  top: 0;
+  top: 50%;
   z-index: 100;
   -moz-background-size: 25%, 12%;
   -o-background-size: 25%, 12%;
@@ -1283,26 +1321,36 @@ main form input[type="text"], main form input[type="password"] {
   background-size: 25%, 12%;
   background-repeat: no-repeat;
   cursor: pointer;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-/* line 101, ../sass/partials/widgets.scss */
+@media screen and (min-width: 1024px) {
+  /* line 86, ../sass/partials/widgets.scss */
+  .slideshow .left-bar, .slideshow .right-bar {
+    padding-bottom: 150px;
+  }
+}
+/* line 107, ../sass/partials/widgets.scss */
 .slideshow .left-bar {
   left: -1px;
   background-image: url(../img/arrow-left.png);
-  -moz-border-radius: 0 500px 500px 0;
+  -moz-border-radius: 0 150px 150px 0;
   -webkit-border-radius: 0;
-  border-radius: 0 500px 500px 0;
+  border-radius: 0 150px 150px 0;
   background-position: 35% center;
 }
-/* line 107, ../sass/partials/widgets.scss */
+/* line 114, ../sass/partials/widgets.scss */
 .slideshow .right-bar {
   right: -1px;
   background-image: url(../img/arrow-right.png);
-  -moz-border-radius: 500px 0 0 500px;
-  -webkit-border-radius: 500px;
-  border-radius: 500px 0 0 500px;
+  -moz-border-radius: 150px 0 0 150px;
+  -webkit-border-radius: 150px;
+  border-radius: 150px 0 0 150px;
   background-position: 59.7% center;
 }
-/* line 115, ../sass/partials/widgets.scss */
+/* line 122, ../sass/partials/widgets.scss */
 .slideshow:hover .left-bar, .slideshow:hover .right-bar {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
@@ -1421,16 +1469,16 @@ footer .hedgebat-container {
 
 /* line 90, ../sass/partials/nav.scss */
 .hedgebat {
-  background: transparent url(../img/hedgebat.jpg) top center no-repeat;
+  background: transparent url(../img/hedgebat.jpg) center 5% no-repeat;
   background-size: cover;
   width: 98%;
   margin: 1% auto;
   height: 0;
   padding-bottom: 20%;
-  -moz-transition: padding-bottom 1s ease-in-out;
-  -o-transition: padding-bottom 1s ease-in-out;
-  -webkit-transition: padding-bottom 1s ease-in-out;
-  transition: padding-bottom 1s ease-in-out;
+  -moz-transition: padding-bottom 1s ease-in-out, background-position 1s ease-in-out;
+  -o-transition: padding-bottom 1s ease-in-out, background-position 1s ease-in-out;
+  -webkit-transition: padding-bottom 1s ease-in-out, background-position 1s ease-in-out;
+  transition: padding-bottom 1s ease-in-out, background-position 1s ease-in-out;
 }
 @media screen and (max-width: 1023px) and (min-width: 768px) {
   /* line 90, ../sass/partials/nav.scss */
@@ -1441,16 +1489,32 @@ footer .hedgebat-container {
 @media screen and (min-width: 1024px) {
   /* line 90, ../sass/partials/nav.scss */
   .hedgebat {
-    padding-bottom: 16%;
+    padding-bottom: 15%;
+    background-position: center 6%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  /* line 90, ../sass/partials/nav.scss */
+  .hedgebat {
+    padding-bottom: 13%;
+    background-position: center 8%;
   }
 }
 @media screen and (min-width: 1400px) {
   /* line 90, ../sass/partials/nav.scss */
   .hedgebat {
-    padding-bottom: 14%;
+    padding-bottom: 12%;
+    background-position: center 12.5%;
   }
 }
-/* line 107, ../sass/partials/nav.scss */
+@media screen and (min-width: 1800px) {
+  /* line 90, ../sass/partials/nav.scss */
+  .hedgebat {
+    padding-bottom: 10%;
+    background-position: center 14.5%;
+  }
+}
+/* line 117, ../sass/partials/nav.scss */
 footer .hedgebat {
   background-position: center bottom;
 }

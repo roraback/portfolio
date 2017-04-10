@@ -21,19 +21,22 @@ $(function() {
 		var newPosition = newSlideIndex * (-100);
         $(".image-container").css("left", newPosition + "%");
     });
-    function slideResize () {
+    function slideControlsReposition () {
+        if ($(".image-container").children().length == 1) {
+            $(".left-bar, .right-bar").css("display", "none")
+        }
         currentWidth = $(".slideshow").width();
         if ($(".slideshow").hasClass("vertical-layout")) {
-            proportionedHeight = currentWidth * percentageHeight / 600;
-            $(".left-bar, .right-bar").css({"height": proportionedHeight + "px", "margin-top": proportionedHeight * 2.5 + "px", "width": proportionedHeight/2 + "px"});
+            proportionedHeight = currentWidth * percentageHeight / 100;
+            $(".left-bar, .right-bar").css({"top": proportionedHeight / 2 + "px"});
         } else if (currentWidth) {
-            proportionedHeight = currentWidth * percentageHeight / 300;
-            $(".left-bar, .right-bar").css({"height": proportionedHeight + "px", "margin-top": proportionedHeight + "px", "width": proportionedHeight/2 + "px"});
+            proportionedHeight = currentWidth * percentageHeight / 100;
+            $(".left-bar, .right-bar").css({"top": proportionedHeight / 2 + "px"});
         }
     }
-    slideResize();
+    slideControlsReposition();
     window.addEventListener('resize', function(event){
-        slideResize();
+        slideControlsReposition();
     });
     $("#loginForm").submit(function(e){
         e.preventDefault();

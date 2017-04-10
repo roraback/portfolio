@@ -114,12 +114,14 @@
   -o-transition: opacity 0.5s ease-out;
   -webkit-transition: opacity 0.5s ease-out;
   transition: opacity 0.5s ease-out;
-  min-width: 10%;
+  width: 12%;
+  max-width: 75px;
   overflow: hidden;
-  height: 400px;
+  height: 0;
+  padding-bottom: 24%;
   background-color: rgba(0, 34, 64, 0.5);
   position: absolute;
-  top: 0;
+  top: 50%;
   z-index: 100;
   -moz-background-size: 25%, 12%;
   -o-background-size: 25%, 12%;
@@ -127,26 +129,36 @@
   background-size: 25%, 12%;
   background-repeat: no-repeat;
   cursor: pointer;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
-/* line 101, ../../sass/partials/widgets.scss */
+@media screen and (min-width: 1024px) {
+  /* line 86, ../../sass/partials/widgets.scss */
+  .slideshow .left-bar, .slideshow .right-bar {
+    padding-bottom: 150px;
+  }
+}
+/* line 107, ../../sass/partials/widgets.scss */
 .slideshow .left-bar {
   left: -1px;
   background-image: url(../img/arrow-left.png);
-  -moz-border-radius: 0 500px 500px 0;
+  -moz-border-radius: 0 150px 150px 0;
   -webkit-border-radius: 0;
-  border-radius: 0 500px 500px 0;
+  border-radius: 0 150px 150px 0;
   background-position: 35% center;
 }
-/* line 107, ../../sass/partials/widgets.scss */
+/* line 114, ../../sass/partials/widgets.scss */
 .slideshow .right-bar {
   right: -1px;
   background-image: url(../img/arrow-right.png);
-  -moz-border-radius: 500px 0 0 500px;
-  -webkit-border-radius: 500px;
-  border-radius: 500px 0 0 500px;
+  -moz-border-radius: 150px 0 0 150px;
+  -webkit-border-radius: 150px;
+  border-radius: 150px 0 0 150px;
   background-position: 59.7% center;
 }
-/* line 115, ../../sass/partials/widgets.scss */
+/* line 122, ../../sass/partials/widgets.scss */
 .slideshow:hover .left-bar, .slideshow:hover .right-bar {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
