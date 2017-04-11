@@ -46,6 +46,8 @@ class Project(models.Model):
     rank = models.IntegerField()
     slug = models.SlugField(max_length=255, unique=True, blank=True, null=True)
     login_required = models.BooleanField(default=False)
+    secret = models.BooleanField(default=False)
+    active = models.BooleanField(default=True)
     
     class Meta:
         ordering = ["rank"]

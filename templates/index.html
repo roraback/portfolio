@@ -10,6 +10,8 @@
 				<h2>{{ category.title }}</h2>
 				<ul>
 		{% for project in category.project_set.all %}
+			{% if user.is_authenticated or not project.secret %}
+				{% if project.active or user.is_superuser %}
 					<li class="{{ randomPopOrder|random }}">
 						<a href="{% url 'project' project.slug %}" title="{{ project.title }}">
 							<figure>
@@ -20,6 +22,8 @@
 							</figure>
 						</a>
 					</li>
+				{% endif %}
+			{% endif %}
 		{% endfor %}
 	{% endif %}
 				</ul>
