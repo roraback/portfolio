@@ -1,17 +1,20 @@
 //Standard Colors
-$bgColor: #002240;
-$lighterBlue: #0088ff;
+$bgColor: #0057a2;
+$lighterBlue: #cde7fd;
 $titleColor: #bebebe;
 $textColor: #eaeaea;
-$linkColor: #ff8f00;
-$linkVisited: #ffe080;
-$linkHover: #ff80d3;
+$linkColor: #ffc107;
+$linkVisited: #bcaaa4;
+$linkHover: #ffe082;
+$homepageLink: #ffa614;
+$homepageLinkHover: #ffbf56;
 $navLinkColor: #ffcf00;
 
 $selectedYellow: #ffe080;
 $stdSelectedBlue: #002240;
 $markSelectedBluish: #d3e1ff;
 $linkSelectedRed: #800f00;
+$defaultShadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
 
 //Fonts
 $bodyFont: "ff-dagny-web-pro-1","ff-dagny-web-pro-2",sans-serif;

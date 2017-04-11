@@ -93,7 +93,7 @@
   font-weight: 300;
   line-height: 1.3em;
   padding-top: .5em;
-  color: #0088ff;
+  color: #cde7fd;
   font-weight: 600 !important;
 }
 @media screen and (max-width: 1023px) and (min-width: 768px), screen and (min-width: 1024px) {
@@ -119,7 +119,7 @@
   overflow: hidden;
   height: 0;
   padding-bottom: 24%;
-  background-color: rgba(0, 34, 64, 0.5);
+  background-color: rgba(0, 87, 162, 0.5);
   position: absolute;
   top: 50%;
   z-index: 100;
@@ -135,12 +135,12 @@
   transform: translateY(-50%);
 }
 @media screen and (min-width: 1024px) {
-  /* line 86, ../../sass/partials/widgets.scss */
-  .slideshow .left-bar, .slideshow .right-bar {
+  /* line 105, ../../sass/partials/widgets.scss */
+  .slideshow:not(.vertical-layout) .left-bar, .slideshow:not(.vertical-layout) .right-bar {
     padding-bottom: 150px;
   }
 }
-/* line 107, ../../sass/partials/widgets.scss */
+/* line 109, ../../sass/partials/widgets.scss */
 .slideshow .left-bar {
   left: -1px;
   background-image: url(../img/arrow-left.png);
@@ -149,7 +149,7 @@
   border-radius: 0 150px 150px 0;
   background-position: 35% center;
 }
-/* line 114, ../../sass/partials/widgets.scss */
+/* line 116, ../../sass/partials/widgets.scss */
 .slideshow .right-bar {
   right: -1px;
   background-image: url(../img/arrow-right.png);
@@ -158,7 +158,7 @@
   border-radius: 150px 0 0 150px;
   background-position: 59.7% center;
 }
-/* line 122, ../../sass/partials/widgets.scss */
+/* line 124, ../../sass/partials/widgets.scss */
 .slideshow:hover .left-bar, .slideshow:hover .right-bar {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;

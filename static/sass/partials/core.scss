@@ -11,7 +11,6 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: $monospace;
   clear: both;
 }
 main {
@@ -29,25 +28,22 @@ main {
   a:hover {
     color: $linkHover;
   }
-  h2 {
+  h1, h2 {
     font-family: $bodyFont;
     font-weight:300;
-    font-size: 200%;
-    padding-top: .5em;
+    font-size: 225%;
+    padding-top: .8em;
     position: relative;
     left: 0;
+    margin-bottom: .3em;
     @include animation(textSlide .75s 1);
 
     &.project-page {
-      padding-top: .8em;
+      padding-top: 1em;
       
       @media #{$sisterBear} {
         padding-top: .5em;
       }
-    }
-    
-    @media #{$mamaBear}, #{$papaBear} {
-      margin-bottom: .3em;
     }
   }
   p {
@@ -113,46 +109,47 @@ main {
     
     li {
       float: left;
-      height: 0;
       position: relative;
       overflow: hidden;
+      box-shadow: $defaultShadow;
       @include transition(transform .3s ease-in-out, box-shadow .3s ease-in-out, width .2s ease-in-out, padding-bottom .2s ease-in-out);
       &:hover {
         @include transform3d(scale3d(1.08, 1.08, 1));
         @include box-shadow(1px 2px 6px 1px rgba(0, 0, 0, .25));
       }
+      &.pop-zero {@include animation(imagePopoutZero 1.36s 1);}
+      &.pop-one {@include animation(imagePopoutOne 1.36s 1);}
+      &.pop-two {@include animation(imagePopoutTwo 1.36s 1);}
+      &.pop-three {@include animation(imagePopoutThree 1.36s 1);}
+      &.pop-four {@include animation(imagePopoutFour 1.36s 1);}
+      &.pop-five {@include animation(imagePopoutFive 1.36s 1);}
+      &.pop-six {@include animation(imagePopoutSix 1.36s 1);}
+      &.pop-seven {@include animation(imagePopoutSeven 1.36s 1);}
+      &.pop-eight {@include animation(imagePopoutEight 1.36s 1);}
+      &.pop-nine {@include animation(imagePopoutNine 1.36s 1);}
 
-      img {
+      .img-container {
+        position: relative;
         width: 100%;
-        height: auto;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin: -50% 0 0 -50%;
-
-        &.pop-zero {@include animation(imagePopoutZero 1.36s 1);}
-        &.pop-one {@include animation(imagePopoutOne 1.36s 1);}
-        &.pop-two {@include animation(imagePopoutTwo 1.36s 1);}
-        &.pop-three {@include animation(imagePopoutThree 1.36s 1);}
-        &.pop-four {@include animation(imagePopoutFour 1.36s 1);}
-        &.pop-five {@include animation(imagePopoutFive 1.36s 1);}
-        &.pop-six {@include animation(imagePopoutSix 1.36s 1);}
-        &.pop-seven {@include animation(imagePopoutSeven 1.36s 1);}
-        &.pop-eight {@include animation(imagePopoutEight 1.36s 1);}
-        &.pop-nine {@include animation(imagePopoutNine 1.36s 1);}
+        padding-bottom: 100%;
+        background-color: rgba(255,255,255,.3);
+        img {
+          width: 100%;
+          height: 100%;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
       }
       figcaption {
-        position: absolute;
-        left: 0;
-        border: none;
-        top: 100%;
-        width: 101%;
+        position: relative;
         line-height:1.3em;
         @include single-transition(top, .2s, ease-in-out, .1s);
-        background-color: rgba($bgColor,.7);
+        background-color: rgba(255,255,255,.3);
         color: #fff;
         @include box-sizing(border-box);
-        padding: 0 0 41% 5%;
+        padding: 0 5% 40%;
         height: 0;
         font-family: $bodyFont;
         font-weight: 200;
@@ -179,7 +176,6 @@ main {
       }
       @media #{$papaBear} {
         width: 19%;
-        padding-bottom: 19%;
         margin: 0 1.25% 1.25% 0;
         &:nth-child(5n) {
           margin-right: 0;
@@ -187,7 +183,6 @@ main {
       }
       @media #{$grandmaBear} {
         width: 15.83%;
-        padding-bottom: 15.83%;
         margin: 0 1% 1% 0;
         &:nth-child(5n) {
           margin-right: 1%;
@@ -198,7 +193,6 @@ main {
       }
       @media #{$grandpaBear} {
         width: 11.9%;
-        padding-bottom: 11.9%;
         margin: 0 .6857% .6857% 0;
         &:nth-child(5n) {
           margin-right: .6857%;
@@ -213,7 +207,6 @@ main {
 
       @media #{$mamaBear} {
         width: 23.5%;
-        padding-bottom: 23.5%;
         margin: 0 2% 2% 0;
         &:nth-child(4n) {
           margin-right: 0;
@@ -222,7 +215,6 @@ main {
       }
       @media #{$brotherBear} {
         width: 32%;
-        padding-bottom: 32%;
         margin: 0 2% 2% 0;
         
         &:nth-child(3n) {
@@ -232,7 +224,6 @@ main {
       }
       @media #{$sisterBear} {
         width: 48.5%;
-        padding-bottom: 47%;
         margin: 0 3% 3% 0;
         
         &:nth-child(2n) {

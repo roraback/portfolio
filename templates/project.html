@@ -6,7 +6,7 @@
 {% endif %}
 {% block content %}
 {% autoescape off %}
-		<h2 class="project-page">{{ project.title }}</h2>
+		<h1 class="project-page">{{ project.title }}</h1>
 	{% if project.login_required and not user.is_authenticated %}
 		<p style="margin-top:.5em;">You&rsquo;ll need to enter a username and password to view this project. Don&rsquo;t have one? Send me a note!</p>
 		<div class="errors">hjkdsjlksjfklsjfklf</div>

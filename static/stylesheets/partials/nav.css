@@ -1,32 +1,37 @@
 /* line 4, ../../sass/partials/nav.scss */
 nav a {
+  font-family: "droid-sans-mono-1", "droid-sans-mono-2", monospace, sans-serif;
   color: #ffcf00;
   text-decoration: none;
 }
 
-/* line 8, ../../sass/partials/nav.scss */
+/* line 9, ../../sass/partials/nav.scss */
 nav a:hover mark {
-  color: #ff80d3;
+  color: #ffe082;
 }
 
-/* line 12, ../../sass/partials/nav.scss */
-h1 a {
-  color: #ff8f00;
+/* line 13, ../../sass/partials/nav.scss */
+.siteTitle a {
+  color: #ffa614;
   text-decoration: none;
 }
+/* line 17, ../../sass/partials/nav.scss */
+.siteTitle a:hover {
+  color: #ffbf56;
+}
 
-/* line 16, ../../sass/partials/nav.scss */
+/* line 21, ../../sass/partials/nav.scss */
 mark {
   background: transparent;
   color: #ffcf00;
 }
 
-/* line 20, ../../sass/partials/nav.scss */
+/* line 25, ../../sass/partials/nav.scss */
 .secret {
-  color: #002240;
+  color: #0057a2;
 }
 
-/* line 24, ../../sass/partials/nav.scss */
+/* line 29, ../../sass/partials/nav.scss */
 header, footer {
   width: 95%;
   margin-left: auto;
@@ -34,38 +39,38 @@ header, footer {
   clear: both;
   margin-top: 1.5%;
 }
-/* line 31, ../../sass/partials/nav.scss */
+/* line 36, ../../sass/partials/nav.scss */
 header nav, footer nav {
   -moz-transition: font-size 1s ease-in-out;
   -o-transition: font-size 1s ease-in-out;
   -webkit-transition: font-size 1s ease-in-out;
   transition: font-size 1s ease-in-out;
 }
-/* line 32, ../../sass/partials/nav.scss */
+/* line 37, ../../sass/partials/nav.scss */
 header nav ul, footer nav ul {
   width: 99%;
   text-align: justify;
   margin: 0 auto -1em auto;
 }
-/* line 37, ../../sass/partials/nav.scss */
+/* line 42, ../../sass/partials/nav.scss */
 header nav ul:before, footer nav ul:before {
   content: '';
   display: block;
   width: 100%;
 }
-/* line 42, ../../sass/partials/nav.scss */
+/* line 47, ../../sass/partials/nav.scss */
 header nav ul:after, footer nav ul:after {
   content: '';
   display: inline-block;
   width: 100%;
 }
-/* line 47, ../../sass/partials/nav.scss */
+/* line 52, ../../sass/partials/nav.scss */
 header nav ul li, footer nav ul li {
   display: inline-block;
   margin: 0;
 }
 @media screen and (max-width: 767px) and (min-width: 501px), screen and (max-width: 500px) {
-  /* line 54, ../../sass/partials/nav.scss */
+  /* line 59, ../../sass/partials/nav.scss */
   header nav .siteTitle, footer nav .siteTitle {
     width: 100%;
     margin-bottom: 1em;
@@ -73,43 +78,39 @@ header nav ul li, footer nav ul li {
   }
 }
 @media screen and (max-width: 767px) and (min-width: 501px) {
-  /* line 61, ../../sass/partials/nav.scss */
+  /* line 66, ../../sass/partials/nav.scss */
   header nav ul li, footer nav ul li {
     float: left;
     margin-right: 10%;
   }
 }
 @media screen and (max-width: 500px) {
-  /* line 31, ../../sass/partials/nav.scss */
+  /* line 36, ../../sass/partials/nav.scss */
   header nav, footer nav {
     font-size: 95%;
   }
-  /* line 69, ../../sass/partials/nav.scss */
+  /* line 74, ../../sass/partials/nav.scss */
   header nav .siteTitle, footer nav .siteTitle {
     text-align: center;
   }
 }
 
-/* line 75, ../../sass/partials/nav.scss */
+/* line 80, ../../sass/partials/nav.scss */
 footer {
   padding-top: 1em;
 }
 
-/* line 78, ../../sass/partials/nav.scss */
-.hedgebat-container {
-  border: 2px solid #ff8f00;
-}
-/* line 81, ../../sass/partials/nav.scss */
+/* line 84, ../../sass/partials/nav.scss */
 header .hedgebat-container {
   margin-bottom: 1%;
 }
-/* line 84, ../../sass/partials/nav.scss */
+/* line 87, ../../sass/partials/nav.scss */
 footer .hedgebat-container {
   margin-bottom: 1.5%;
   margin-top: 1%;
 }
 
-/* line 90, ../../sass/partials/nav.scss */
+/* line 93, ../../sass/partials/nav.scss */
 .hedgebat {
   background: transparent url(../img/hedgebat.jpg) center 5% no-repeat;
   background-size: cover;
@@ -117,46 +118,49 @@ footer .hedgebat-container {
   margin: 1% auto;
   height: 0;
   padding-bottom: 20%;
+  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
   -moz-transition: padding-bottom 1s ease-in-out, background-position 1s ease-in-out;
   -o-transition: padding-bottom 1s ease-in-out, background-position 1s ease-in-out;
   -webkit-transition: padding-bottom 1s ease-in-out, background-position 1s ease-in-out;
   transition: padding-bottom 1s ease-in-out, background-position 1s ease-in-out;
 }
 @media screen and (max-width: 1023px) and (min-width: 768px) {
-  /* line 90, ../../sass/partials/nav.scss */
+  /* line 93, ../../sass/partials/nav.scss */
   .hedgebat {
     padding-bottom: 18%;
   }
 }
 @media screen and (min-width: 1024px) {
-  /* line 90, ../../sass/partials/nav.scss */
+  /* line 93, ../../sass/partials/nav.scss */
   .hedgebat {
     padding-bottom: 15%;
     background-position: center 6%;
   }
 }
 @media screen and (min-width: 1200px) {
-  /* line 90, ../../sass/partials/nav.scss */
+  /* line 93, ../../sass/partials/nav.scss */
   .hedgebat {
     padding-bottom: 13%;
     background-position: center 8%;
   }
 }
 @media screen and (min-width: 1400px) {
-  /* line 90, ../../sass/partials/nav.scss */
+  /* line 93, ../../sass/partials/nav.scss */
   .hedgebat {
     padding-bottom: 12%;
     background-position: center 12.5%;
   }
 }
 @media screen and (min-width: 1800px) {
-  /* line 90, ../../sass/partials/nav.scss */
+  /* line 93, ../../sass/partials/nav.scss */
   .hedgebat {
     padding-bottom: 10%;
     background-position: center 14.5%;
   }
 }
-/* line 117, ../../sass/partials/nav.scss */
+/* line 121, ../../sass/partials/nav.scss */
 footer .hedgebat {
   background-position: center bottom;
 }

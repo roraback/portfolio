@@ -1,4 +1,8 @@
 {% extends "base.html" %}
+{% block header_home_link %}
+	<li class="siteTitle"><h1><a href="{% url 'home' %}" title="Kenneth Roraback - Home"><span class="secret">'</span>Kenneth Roraback<span class="secret">'</span><mark>=&gt;</mark><span class="secret">'</span>The Stories I Tell<span class="secret">'</span></a></h1></li>
+{% endblock %}
+
 {% block content %}
 {% for category in category_list %}
 	{% if category.project_set.all.count > 0 %}
@@ -6,10 +10,12 @@
 				<h2>{{ category.title }}</h2>
 				<ul>
 		{% for project in category.project_set.all %}
-					<li>
+					<li class="{{ randomPopOrder|random }}">
 						<a href="{% url 'project' project.slug %}" title="{{ project.title }}">
 							<figure>
-								<img class="{{ randomPopOrder|random }}" src="{{ project.thumbnail.url }}" alt="{{ project.title }}" />
+								<div class="img-container">
+									<img src="{{ project.thumbnail.url }}" alt="{{ project.title }}" />
+								</div>
 								<figcaption><span class="table-container"><span class="table"><span class="cell">{{ project.title|safe }}</span></span></span></figcaption>
 							</figure>
 						</a>

@@ -2,6 +2,7 @@
 @import "compass/css3";
 
 nav a {
+  font-family: $monospace;
   color: $navLinkColor;
   text-decoration: none;
 }
@@ -9,9 +10,13 @@ nav a:hover mark {
   color: $linkHover;
 }
 
-h1 a {
-  color: $linkColor;
+.siteTitle a {
+  color: $homepageLink;
   text-decoration: none;
+
+  &:hover {
+    color: $homepageLinkHover;
+  }
 }
 mark {
   background: transparent;
@@ -76,8 +81,6 @@ footer {
   padding-top: 1em;
 }
 .hedgebat-container {
-  border: 2px solid $linkColor;
-  
   header & {
     margin-bottom: 1%;
   }
@@ -94,6 +97,7 @@ footer {
   margin: 1% auto;
   height: 0;
   padding-bottom: 20%;
+  @include box-shadow($defaultShadow);
   @include transition(padding-bottom 1s ease-in-out, background-position 1s ease-in-out);
   @media #{$mamaBear} {
     padding-bottom: 18%;

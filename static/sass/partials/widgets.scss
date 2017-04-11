@@ -100,7 +100,9 @@
     background-repeat: no-repeat;
     cursor: pointer;
     @include transform(translateY(-50%));
-    @media #{$papaBear} {
+  }
+  @media #{$papaBear} {
+    &:not(.vertical-layout) .left-bar, &:not(.vertical-layout) .right-bar {
       padding-bottom: 150px;
     }
   }
