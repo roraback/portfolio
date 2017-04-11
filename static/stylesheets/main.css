@@ -1463,7 +1463,7 @@ footer .hedgebat-container {
 
 /* line 93, ../sass/partials/nav.scss */
 .hedgebat {
-  background: transparent url(../img/hedgebat.jpg) center 5% no-repeat;
+  background: rgba(255, 255, 255, 0.3) url(../img/hedgebat.jpg) center 5% no-repeat;
   background-size: cover;
   width: 98%;
   margin: 1% auto;
