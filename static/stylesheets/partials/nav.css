@@ -32,7 +32,7 @@ mark {
 }
 
 /* line 29, ../../sass/partials/nav.scss */
-header, footer {
+body > header, footer {
   width: 95%;
   margin-left: auto;
   margin-right: auto;
@@ -40,38 +40,38 @@ header, footer {
   margin-top: 1.5%;
 }
 /* line 36, ../../sass/partials/nav.scss */
-header nav, footer nav {
+body > header nav, footer nav {
   -moz-transition: font-size 1s ease-in-out;
   -o-transition: font-size 1s ease-in-out;
   -webkit-transition: font-size 1s ease-in-out;
   transition: font-size 1s ease-in-out;
 }
 /* line 37, ../../sass/partials/nav.scss */
-header nav ul, footer nav ul {
+body > header nav ul, footer nav ul {
   width: 99%;
   text-align: justify;
   margin: 0 auto -1em auto;
 }
 /* line 42, ../../sass/partials/nav.scss */
-header nav ul:before, footer nav ul:before {
+body > header nav ul:before, footer nav ul:before {
   content: '';
   display: block;
   width: 100%;
 }
 /* line 47, ../../sass/partials/nav.scss */
-header nav ul:after, footer nav ul:after {
+body > header nav ul:after, footer nav ul:after {
   content: '';
   display: inline-block;
   width: 100%;
 }
 /* line 52, ../../sass/partials/nav.scss */
-header nav ul li, footer nav ul li {
+body > header nav ul li, footer nav ul li {
   display: inline-block;
   margin: 0;
 }
 @media screen and (max-width: 767px) and (min-width: 501px), screen and (max-width: 500px) {
   /* line 59, ../../sass/partials/nav.scss */
-  header nav .siteTitle, footer nav .siteTitle {
+  body > header nav .siteTitle, footer nav .siteTitle {
     width: 100%;
     margin-bottom: 1em;
     margin-top: .5em;
@@ -79,18 +79,18 @@ header nav ul li, footer nav ul li {
 }
 @media screen and (max-width: 767px) and (min-width: 501px) {
   /* line 66, ../../sass/partials/nav.scss */
-  header nav ul li, footer nav ul li {
+  body > header nav ul li, footer nav ul li {
     float: left;
     margin-right: 10%;
   }
 }
 @media screen and (max-width: 500px) {
   /* line 36, ../../sass/partials/nav.scss */
-  header nav, footer nav {
+  body > header nav, footer nav {
     font-size: 95%;
   }
   /* line 74, ../../sass/partials/nav.scss */
-  header nav .siteTitle, footer nav .siteTitle {
+  body > header nav .siteTitle, footer nav .siteTitle {
     text-align: center;
   }
 }

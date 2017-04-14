@@ -37,14 +37,21 @@ main {
     left: 0;
     margin-bottom: .3em;
     @include animation(textSlide .75s 1);
-
-    &.project-page {
-      padding-top: 1em;
-      
-      @media #{$sisterBear} {
-        padding-top: .5em;
-      }
+  }
+  h1.project-page {
+    padding-top: 1em;
+    
+    @media #{$sisterBear} {
+      padding-top: .5em;
     }
+  }
+  h2.project-tagline {
+    margin-top: 0px;
+    padding-top: 0;
+    font-size: 140%;
+    font-style: italic;
+    margin-bottom: .75em;
+    line-height: 1.3em;
   }
   p {
     font-weight: 300;
