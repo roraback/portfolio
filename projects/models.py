@@ -48,6 +48,7 @@ class Project(models.Model):
     login_required = models.BooleanField(default=False)
     secret = models.BooleanField(default=False)
     active = models.BooleanField(default=True)
+    tagline = models.TextField(blank=True, null=True)
     
     class Meta:
         ordering = ["rank"]
