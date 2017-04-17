@@ -26,7 +26,7 @@
 		</form>
 	{% else %}
 		<div class="slideshow{% if project.percentageHeight > 100 %} vertical-layout{% endif %}">
-			<div class="image-container" style="width:{% widthratio project.image_set.count|add:1 1 100 %}%;">
+			<div class="image-container" style="width:{% widthratio project.numFigures 1 100 %}%;">
 				<figure style="width: {{ project.percentageWidth }}%;">
 				{% if project.has_video %}
 					<div class="content-wrapper" style="padding-bottom: {{ project.percentageHeight }}%;">
@@ -40,14 +40,22 @@
 					<figcaption>{{ project.main_caption }}</figcaption>
 				{% endif %}
 				</figure>
-	{% for image in project.image_set.all %}
+		{% for video in project.video_set.all %}
+				<figure style="width: {{ project.percentageWidth }}%;">
+					<div class="content-wrapper" style="padding-bottom: {{ project.percentageHeight }}%;">
+						<iframe src="//player.vimeo.com/video/{{ video.embed_id }}" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+					</div>
+					<figcaption>{{ video.caption }}</figcaption>
+				</figure>
+		{% endfor %}
+		{% for image in project.image_set.all %}
 				<figure style="width: {{ project.percentageWidth }}%;">
 					<div class="content-wrapper" style="padding-bottom: {{ project.percentageHeight }}%;">
 						<img src="{{ image.image.url }}" alt="{{ image.title }}" />
 					</div>
 					<figcaption>{{ image.caption }}</figcaption>
 				</figure>
-	{% endfor %}
+		{% endfor %}
 			</div>
 			<div class="left-bar"></div>
 			<div class="right-bar"></div>

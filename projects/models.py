@@ -31,6 +31,19 @@ class Addendum(models.Model):
     def __unicode__(self):
         return self.title
 
+class Video(models.Model):
+    title = models.CharField(max_length=100)
+    embed_id = models.CharField(max_length=100)
+    caption = models.TextField()
+    rank = models.IntegerField()
+    project = models.ForeignKey('Project')
+
+    class Meta:
+        ordering = ["rank"]
+
+    def __unicode__(self):
+        return self.title
+
 class Project(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
@@ -68,9 +81,13 @@ class Project(models.Model):
         return pHeight
     
     @property
+    def numFigures(self):
+        return self.image_set.all().count() + self.video_set.all().count() + 1
+    
+    @property
     def percentageWidth(self):
-        numImages = self.image_set.all().count() + 1
-        pWidth = math.floor(100 * 100000 / numImages)
+        numFigures = self.numFigures
+        pWidth = math.floor(100 * 100000 / numFigures)
         pWidth = round(pWidth/100000,5)
         print pWidth
         return pWidth
