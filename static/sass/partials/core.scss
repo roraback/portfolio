@@ -183,69 +183,113 @@ main {
           }
         }
       }
-      @media #{$papaBear} {
-        width: 19%;
-        margin: 0 1.25% 1.65% 0;
-        &:nth-child(5n) {
-          margin-right: 0;
-        }
-      }
-      @media #{$grandmaBear} {
-        width: 15.83%;
-        margin: 0 1% 1.3% 0;
-        &:nth-child(5n) {
-          margin-right: 1%;
-        }
-        &:nth-child(6n) {
-          margin-right: 0;
-        }
-      }
-      @media #{$grandpaBear} {
-        width: 11.8%;
-        margin: 0 .8% 1% 0;
-        &:nth-child(5n) {
-          margin-right: .8%;
-        }
-        &:nth-child(6n) {
-          margin-right: .8%;
-        }
-        &:nth-child(8n) {
-          margin-right: 0;
-        }
-      }
-
-      @media #{$mamaBear} {
-        width: 23.5%;
-        margin: 0 2% 2.2% 0;
-        &:nth-child(4n) {
-          margin-right: 0;
-        }
-        
-      }
-      @media #{$brotherBear} {
-        width: 32%;
-        margin: 0 2% 2.5% 0;
-        
-        &:nth-child(3n) {
-          margin-right: 0;
-        }
-        
-      }
-      @media #{$sisterBear} {
-        width: 48.25%;
-        margin: 0 3.5% 4% 0;
-        
-        &:nth-child(2n) {
-          margin-right: 0;
-        }
-        
-      }
     }
-    li:hover {
-      figcaption {
-        top: 60%;
-      }
+  }
+}
+.indexSection li, .kenny-roraback-photo {
+  @media #{$papaBear} {
+    width: 19%;
+    margin: 0 1.25% 1.65% 0;
+    &:nth-child(5n) {
+      margin-right: 0;
     }
+  }
+  @media #{$grandmaBear} {
+    width: 15.83%;
+    margin: 0 1% 1.3% 0;
+    &:nth-child(5n) {
+      margin-right: 1%;
+    }
+    &:nth-child(6n) {
+      margin-right: 0;
+    }
+  }
+  @media #{$grandpaBear} {
+    width: 11.8%;
+    margin: 0 .8% 1% 0;
+    &:nth-child(5n) {
+      margin-right: .8%;
+    }
+    &:nth-child(6n) {
+      margin-right: .8%;
+    }
+    &:nth-child(8n) {
+      margin-right: 0;
+    }
+  }
+  @media #{$mamaBear} {
+    width: 23.5%;
+    margin: 0 2% 2.2% 0;
+    &:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+  @media #{$brotherBear} {
+    width: 32%;
+    margin: 0 2% 2.5% 0;
     
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+  @media #{$sisterBear} {
+    width: 48.25%;
+    margin: 0 3.5% 4% 0;
+    
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}
+main > header {
+  padding: 1.5em 0 1em;
+
+  .kenny-roraback-photo {
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    background-color: $insetBg;
+    @include border-radius(50%);
+    margin-bottom: 0;
+    padding: 1% .5% 0;
+    overflow: hidden;
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  dl {
+    display: inline-block;
+    vertical-align: middle;
+    h1 {
+      padding-top: 0;
+    }
+    dd {
+      line-height: 1.3em;
+      font-weight: 300;
+      font-size: 1.1em;
+      &:before {
+        content: "– ";
+      }
+    }
+    mark {
+      color: $lighterBlue;
+    }
+
+    @media #{$brotherBear} {
+      width: 66%;
+    }
+    @media #{$mamaBear} {
+      width: 74.5%;
+    }
+    @media #{$papaBear} {
+      width: 79.75%;
+    }
+    @media #{$grandmaBear} {
+      width: 83.17%;
+    }
+    @media #{$grandpaBear} {
+      width: 87.4%;
+    }
   }
 }

@@ -1,9 +1,18 @@
 {% extends "base.html" %}
-{% block header_home_link %}
-	<li class="siteTitle"><h1><a href="{% url 'home' %}" title="Kenneth Roraback - Home"><span class="secret">'</span>Kenneth Roraback<span class="secret">'</span><mark>=&gt;</mark><span class="secret">'</span>The Stories I Tell<span class="secret">'</span></a></h1></li>
-{% endblock %}
+	{# <li class="siteTitle"><h1><a href="{% url 'home' %}" title="Kenneth Roraback - Home"><span class="secret">'</span>Kenneth Roraback<span class="secret">'</span><mark>=&gt;</mark><span class="secret">'</span>The Stories I Tell<span class="secret">'</span></a></h1></li> #}
 
 {% block content %}
+<header>
+	<div class="kenny-roraback-photo"><img src="{{ STATIC_URL }}img/kenneth-roraback.png" alt="Kenneth Roraback"></div><!-- 
+	--><dl>
+		<dt><h1>Who is Kenneth Roraback?</h1></dt>
+		<dd>UX/UI Designer with strong analytical and creative problem solving and a deeply cross-functional skill set</dd>
+		<dd>Loves to tackle challenging interaction problems and create smooth, simple user flows</dd>
+		<dd>Educated at MIT: S.B. Physics, S.B. Theater</dd>
+		<dd>Educated at Parsons: M.F.A. Design and Technology</dd>
+		<dd>5 years of start-up leadership experience + 4 years of project management at a Fortune 500 company</dd>
+	</dl>
+</header>
 {% for category in category_list %}
 	{% if category.project_set.all.count > 0 %}
 			<section class="indexSection">

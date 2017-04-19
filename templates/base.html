@@ -28,26 +28,17 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-		<header>
-			{% block header_image %}
-			<div class="hedgebat-container">
-				<a href="{% url 'home' %}" title="Kenneth Roraback - Home">
-					<div class="hedgebat"></div>
-				</a>
-			</div>
+		<nav>
+			<ul>
+			{% block header_home_link %}
+				<li class="siteTitle"><a href="{% url 'home' %}" title="Kenneth Roraback - Home"><span class="secret">'</span>Kenneth Roraback<span class="secret">'</span><mark>=&gt;</mark><span class="secret">'</span>The Stories I Tell<span class="secret">'</span></a></li>
 			{% endblock %}
-			<nav>
-				<ul>
-				{% block header_home_link %}
-					<li class="siteTitle"><a href="{% url 'home' %}" title="Kenneth Roraback - Home"><span class="secret">'</span>Kenneth Roraback<span class="secret">'</span><mark>=&gt;</mark><span class="secret">'</span>The Stories I Tell<span class="secret">'</span></a></li>
-				{% endblock %}
-					<li><a href="{% url 'about' %}"><mark>&nbsp;About</mark></a></li>
-					<li><a href="{{ STATIC_URL }}pdf/kenneth-roraback-resume.pdf" target="_blank" title="Kenneth Roraback's Resume"><mark>Resum&eacute;</mark></a></li>
-					<li><a href="{% url 'contact' %}"><mark>Contact</mark></a></h2></li>
-					<li><a href="{% random_project %}" title="random project"><mark>Get lucky!&nbsp;</mark></a></li>
-				</ul>
-			</nav>
-		</header>
+				<li><a href="{% url 'about' %}"><mark>&nbsp;About</mark></a></li>
+				<li><a href="{{ STATIC_URL }}pdf/kenneth-roraback-resume.pdf" target="_blank" title="Kenneth Roraback's Resume"><mark>Resum&eacute;</mark></a></li>
+				<li><a href="{% url 'contact' %}"><mark>Contact</mark></a></h2></li>
+				<li><a href="{% random_project %}" title="random project"><mark>Get lucky!&nbsp;</mark></a></li>
+			</ul>
+		</nav>
 		<main>
 {% block blog_nav %}{% endblock %}
 {% block content %}{% endblock %}
@@ -62,13 +53,7 @@
 					<li><a href="{% random_project %}" title="random project"><mark>Get lucky!&nbsp;</mark></a></li>
 				</ul>
 			</nav>
-			{% block footer_image %}
-			<div class="hedgebat-container">
-				<a href="{% url 'home' %}" title="Kenneth Roraback - Home">
-					<div class="hedgebat"></div>
-				</a>
-			</div>
-			{% endblock %}
+			{% block footer_image %}{% endblock %}
 		</footer>
 
 

@@ -32,135 +32,62 @@ mark {
 }
 
 /* line 29, ../../sass/partials/nav.scss */
-body > header, footer {
+nav {
   width: 95%;
   margin-left: auto;
   margin-right: auto;
   clear: both;
-  margin-top: 1.5%;
-}
-/* line 36, ../../sass/partials/nav.scss */
-body > header nav, footer nav {
+  padding-top: 1em;
   -moz-transition: font-size 1s ease-in-out;
   -o-transition: font-size 1s ease-in-out;
   -webkit-transition: font-size 1s ease-in-out;
   transition: font-size 1s ease-in-out;
 }
-/* line 37, ../../sass/partials/nav.scss */
-body > header nav ul, footer nav ul {
+/* line 36, ../../sass/partials/nav.scss */
+nav ul {
   width: 99%;
   text-align: justify;
-  margin: 0 auto -1em auto;
+  margin: 0 auto;
 }
-/* line 42, ../../sass/partials/nav.scss */
-body > header nav ul:before, footer nav ul:before {
+/* line 41, ../../sass/partials/nav.scss */
+nav ul:before {
   content: '';
   display: block;
   width: 100%;
 }
-/* line 47, ../../sass/partials/nav.scss */
-body > header nav ul:after, footer nav ul:after {
+/* line 46, ../../sass/partials/nav.scss */
+nav ul:after {
   content: '';
   display: inline-block;
   width: 100%;
 }
-/* line 52, ../../sass/partials/nav.scss */
-body > header nav ul li, footer nav ul li {
+/* line 51, ../../sass/partials/nav.scss */
+nav ul li {
   display: inline-block;
   margin: 0;
 }
 @media screen and (max-width: 767px) and (min-width: 501px), screen and (max-width: 500px) {
-  /* line 59, ../../sass/partials/nav.scss */
-  body > header nav .siteTitle, footer nav .siteTitle {
+  /* line 58, ../../sass/partials/nav.scss */
+  nav .siteTitle {
     width: 100%;
     margin-bottom: 1em;
     margin-top: .5em;
   }
 }
 @media screen and (max-width: 767px) and (min-width: 501px) {
-  /* line 66, ../../sass/partials/nav.scss */
-  body > header nav ul li, footer nav ul li {
+  /* line 65, ../../sass/partials/nav.scss */
+  nav ul li {
     float: left;
     margin-right: 10%;
   }
 }
 @media screen and (max-width: 500px) {
-  /* line 36, ../../sass/partials/nav.scss */
-  body > header nav, footer nav {
+  /* line 29, ../../sass/partials/nav.scss */
+  nav {
     font-size: 95%;
   }
-  /* line 74, ../../sass/partials/nav.scss */
-  body > header nav .siteTitle, footer nav .siteTitle {
+  /* line 73, ../../sass/partials/nav.scss */
+  nav .siteTitle {
     text-align: center;
   }
-}
-
-/* line 80, ../../sass/partials/nav.scss */
-footer {
-  padding-top: 1em;
-}
-
-/* line 84, ../../sass/partials/nav.scss */
-header .hedgebat-container {
-  margin-bottom: 1%;
-}
-/* line 87, ../../sass/partials/nav.scss */
-footer .hedgebat-container {
-  margin-bottom: 1.5%;
-  margin-top: 1%;
-}
-
-/* line 93, ../../sass/partials/nav.scss */
-.hedgebat {
-  background: rgba(255, 255, 255, 0.3) url(../img/hedgebat.jpg) center 5% no-repeat;
-  background-size: cover;
-  width: 98%;
-  margin: 1% auto;
-  height: 0;
-  padding-bottom: 20%;
-  -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
-  -moz-transition: padding-bottom 1s ease-in-out, background-position 1s ease-in-out;
-  -o-transition: padding-bottom 1s ease-in-out, background-position 1s ease-in-out;
-  -webkit-transition: padding-bottom 1s ease-in-out, background-position 1s ease-in-out;
-  transition: padding-bottom 1s ease-in-out, background-position 1s ease-in-out;
-}
-@media screen and (max-width: 1023px) and (min-width: 768px) {
-  /* line 93, ../../sass/partials/nav.scss */
-  .hedgebat {
-    padding-bottom: 18%;
-  }
-}
-@media screen and (min-width: 1024px) {
-  /* line 93, ../../sass/partials/nav.scss */
-  .hedgebat {
-    padding-bottom: 15%;
-    background-position: center 6%;
-  }
-}
-@media screen and (min-width: 1200px) {
-  /* line 93, ../../sass/partials/nav.scss */
-  .hedgebat {
-    padding-bottom: 13%;
-    background-position: center 8%;
-  }
-}
-@media screen and (min-width: 1400px) {
-  /* line 93, ../../sass/partials/nav.scss */
-  .hedgebat {
-    padding-bottom: 12%;
-    background-position: center 12.5%;
-  }
-}
-@media screen and (min-width: 1800px) {
-  /* line 93, ../../sass/partials/nav.scss */
-  .hedgebat {
-    padding-bottom: 10%;
-    background-position: center 14.5%;
-  }
-}
-/* line 121, ../../sass/partials/nav.scss */
-footer .hedgebat {
-  background-position: center bottom;
 }

@@ -26,99 +26,52 @@ mark {
   color: $bgColor;
 }
 
-body > header, footer {
+nav {
   width: 95%;
   margin-left: auto;
   margin-right: auto;
   clear: both;
-  margin-top: 1.5%;
-  
-  nav {
-    ul {
-      width: 99%;
-      text-align: justify;
-      margin: 0 auto -1em auto;
-      
-      &:before {
-        content: '';
-        display: block;
-        width: 100%;
-      }
-      &:after {
-        content: '';
-        display: inline-block;
-        width: 100%;
-      }
-      li {
-        display: inline-block;
-        margin: 0;
-      }
-    }
-    @include single-transition(font-size, 1s, ease-in-out);
-    @media #{$brotherBear}, #{$sisterBear} {
-      .siteTitle {
-        width: 100%;
-        margin-bottom: 1em;
-        margin-top: .5em;
-      }
-    }
-    @media #{$brotherBear} {
-      ul li {
-        float: left;
-        margin-right: 10%;
-      }
-    }
-    @media #{$sisterBear} {
-      font-size: 95%;
-
-      .siteTitle {
-        text-align: center;
-      }
-    }
-  }
-}
-footer {
   padding-top: 1em;
-}
-.hedgebat-container {
-  header & {
-    margin-bottom: 1%;
-  }
-  footer & {
-    margin-bottom: 1.5%;
-    margin-top: 1%;
-  }
-}
 
-.hedgebat {
-  background: rgba(255,255,255,.3) url(../img/hedgebat.jpg) center 5% no-repeat;
-  background-size: cover;
-  width: 98%;
-  margin: 1% auto;
-  height: 0;
-  padding-bottom: 20%;
-  @include box-shadow($defaultShadow);
-  @include transition(padding-bottom 1s ease-in-out, background-position 1s ease-in-out);
-  @media #{$mamaBear} {
-    padding-bottom: 18%;
+  ul {
+    width: 99%;
+    text-align: justify;
+    margin: 0 auto;
+    
+    &:before {
+      content: '';
+      display: block;
+      width: 100%;
+    }
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 100%;
+    }
+    li {
+      display: inline-block;
+      margin: 0;
+    }
   }
-  @media #{$papaBear} {
-    padding-bottom: 15%;
-    background-position: center 6%;
+  @include single-transition(font-size, 1s, ease-in-out);
+  @media #{$brotherBear}, #{$sisterBear} {
+    .siteTitle {
+      width: 100%;
+      margin-bottom: 1em;
+      margin-top: .5em;
+    }
   }
-  @media #{$uncleBear} {
-    padding-bottom: 13%;
-    background-position: center 8%;
+  @media #{$brotherBear} {
+    ul li {
+      float: left;
+      margin-right: 10%;
+    }
   }
-  @media #{$grandmaBear} {
-    padding-bottom: 12%;
-    background-position: center 12.5%;
-  }
-  @media #{$grandpaBear} {
-    padding-bottom: 10%;
-    background-position: center 14.5%;
-  }
-  footer & {
-    background-position: center bottom;
+  @media #{$sisterBear} {
+    font-size: 95%;
+
+    .siteTitle {
+      text-align: center;
+    }
   }
 }
