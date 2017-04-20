@@ -243,6 +243,7 @@ main {
 }
 .index-header {
   padding: 1.5em 0 1em;
+  @include animation(fadeIn .4s ease-out);
 
   .kenny-roraback-photo {
     box-sizing: border-box;
@@ -263,6 +264,7 @@ main {
     vertical-align: middle;
     h1 {
       padding-top: 0;
+      @include animation(none);
     }
     dd {
       line-height: 1.3em;

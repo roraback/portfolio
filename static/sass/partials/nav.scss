@@ -6,11 +6,11 @@ nav a {
   color: $navLinkColor;
   text-decoration: none;
 }
-nav a:hover mark {
+nav a:hover mark, nav a:hover {
   color: $linkHover;
 }
 
-.siteTitle a {
+nav a.active, nav a.active mark {
   color: $homepageLink;
   text-decoration: none;
 

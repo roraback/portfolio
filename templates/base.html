@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>{% block title %}Kenneth Roraback -> The Stories I Tell{% endblock %}</title>
+		<title>{% block title %}Kenneth Roraback -> Design Work{% endblock %}</title>
 		<meta name="description" content="{% block description %}Kenneth Roraback's portfolio website: Come and check out projects in web and mobile design, interaction, branding, video, theater and architecture. If you like it, let Kenny know by sending him an e-mail!{% endblock %}">
 		<meta name="keywords" content="{% block keywords %}kenneth roraback kenny UX design user experience interactive video theater architecture typography MIT parsons design{% endblock %}" />
 
@@ -30,12 +30,13 @@
 
 		<nav>
 			<ul>
+			{% with url_name=request.resolver_match.url_name %}
 			{% block header_home_link %}
-				<li class="siteTitle"><a href="{% url 'home' %}" title="Kenneth Roraback - Design Work"><span class="secret">'</span>Kenneth Roraback<span class="secret">'</span><mark>=&gt;</mark><span class="secret">'</span>Design Work<span class="secret">'</span></a></li>
+				<li class="siteTitle"><a href="{% url 'home' %}" title="Kenneth Roraback - Design Work" {% if url_name == 'home' %}class="active"{% endif %}><span class="secret">'</span>Kenneth Roraback<span class="secret">'</span><mark>=&gt;</mark><span class="secret">'</span>Design Work<span class="secret">'</span></a></li>
 			{% endblock %}
-				<li><a href="{% url 'about' %}"><mark>&nbsp;About</mark></a></li>
+				<li><a href="{% url 'about' %}" title="About Kenneth Roraback" {% if url_name == 'about' %}class="active"{% endif %}><mark>&nbsp;About</mark></a></li>
 				<li><a href="{{ STATIC_URL }}pdf/kenneth-roraback-resume.pdf" target="_blank" title="Kenneth Roraback's Resume"><mark>Resum&eacute;</mark></a></li>
-				<li><a href="{% url 'contact' %}"><mark>Contact</mark></a></h2></li>
+				<li><a href="{% url 'contact' %}" title="Contact Kenneth Roraback" {% if url_name == 'contact' %}class="active"{% endif %}><mark>Contact</mark></a></h2></li>
 				<li><a href="{% random_project %}" title="random project"><mark>Get lucky!&nbsp;</mark></a></li>
 			</ul>
 		</nav>
@@ -46,14 +47,14 @@
 		<footer>
 			<nav>
 				<ul>
-					<li class="siteTitle"><a href="{% url 'home' %}" title="Kenneth Roraback - Home"><span class="secret">'</span>Kenneth Roraback<span class="secret">'</span><mark>=&gt;</mark><span class="secret">'</span>Design Work<span class="secret">'</span></a></li>
-					<li><a href="{% url 'about' %}"><mark>&nbsp;About</mark></a></li>
+					<li class="siteTitle"><a href="{% url 'home' %}" title="Kenneth Roraback - Design Work" {% if url_name == 'home' %}class="active"{% endif %}><span class="secret">'</span>Kenneth Roraback<span class="secret">'</span><mark>=&gt;</mark><span class="secret">'</span>Design Work<span class="secret">'</span></a></li>
+					<li><a href="{% url 'about' %}" title="About Kenneth Roraback" {% if url_name == 'about' %}class="active"{% endif %}><mark>&nbsp;About</mark></a></li>
 					<li><a href="{{ STATIC_URL }}pdf/kenneth-roraback-resume.pdf" target="_blank"><mark>Resum&eacute;</mark></a></li>
-					<li><a href="{% url 'contact' %}"><mark>Contact</mark></a></li>
+					<li><a href="{% url 'contact' %}" title="Contact Kenneth Roraback" {% if url_name == 'contact' %}class="active"{% endif %}><mark>Contact</mark></a></li>
 					<li><a href="{% random_project %}" title="random project"><mark>Get lucky!&nbsp;</mark></a></li>
 				</ul>
 			</nav>
-			{% block footer_image %}{% endblock %}
+			{% endwith %}
 		</footer>
 
 

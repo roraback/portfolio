@@ -6,17 +6,17 @@ nav a {
 }
 
 /* line 9, ../../sass/partials/nav.scss */
-nav a:hover mark {
+nav a:hover mark, nav a:hover {
   color: #ffe082;
 }
 
 /* line 13, ../../sass/partials/nav.scss */
-.siteTitle a {
+nav a.active, nav a.active mark {
   color: #ffa614;
   text-decoration: none;
 }
 /* line 17, ../../sass/partials/nav.scss */
-.siteTitle a:hover {
+nav a.active:hover, nav a.active mark:hover {
   color: #ffbf56;
 }
 

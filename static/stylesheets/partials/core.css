@@ -362,8 +362,11 @@ main form input[type="text"], main form input[type="password"] {
 /* line 244, ../../sass/partials/core.scss */
 .index-header {
   padding: 1.5em 0 1em;
+  -moz-animation: fadeIn 0.4s ease-out;
+  -webkit-animation: fadeIn 0.4s ease-out;
+  animation: fadeIn 0.4s ease-out;
 }
-/* line 247, ../../sass/partials/core.scss */
+/* line 248, ../../sass/partials/core.scss */
 .index-header .kenny-roraback-photo {
   box-sizing: border-box;
   display: inline-block;
@@ -376,75 +379,78 @@ main form input[type="text"], main form input[type="password"] {
   padding: 1% .5% 0;
   overflow: hidden;
 }
-/* line 256, ../../sass/partials/core.scss */
+/* line 257, ../../sass/partials/core.scss */
 .index-header .kenny-roraback-photo img {
   width: 100%;
   display: block;
 }
-/* line 261, ../../sass/partials/core.scss */
+/* line 262, ../../sass/partials/core.scss */
 .index-header dl {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 264, ../../sass/partials/core.scss */
+/* line 265, ../../sass/partials/core.scss */
 .index-header dl h1 {
   padding-top: 0;
+  -moz-animation: none;
+  -webkit-animation: none;
+  animation: none;
 }
-/* line 267, ../../sass/partials/core.scss */
+/* line 269, ../../sass/partials/core.scss */
 .index-header dl dd {
   line-height: 1.3em;
   font-weight: 300;
   font-size: 1.1em;
 }
-/* line 271, ../../sass/partials/core.scss */
+/* line 273, ../../sass/partials/core.scss */
 .index-header dl dd:before {
   content: "– ";
 }
-/* line 275, ../../sass/partials/core.scss */
+/* line 277, ../../sass/partials/core.scss */
 .index-header dl mark {
   color: #cde7fd;
 }
 @media screen and (max-width: 767px) and (min-width: 501px) {
-  /* line 261, ../../sass/partials/core.scss */
+  /* line 262, ../../sass/partials/core.scss */
   .index-header dl {
     width: 66%;
   }
 }
 @media screen and (max-width: 1023px) and (min-width: 768px) {
-  /* line 261, ../../sass/partials/core.scss */
+  /* line 262, ../../sass/partials/core.scss */
   .index-header dl {
     width: 74.5%;
   }
 }
 @media screen and (min-width: 1024px) {
-  /* line 261, ../../sass/partials/core.scss */
+  /* line 262, ../../sass/partials/core.scss */
   .index-header dl {
     width: 79.75%;
   }
 }
 @media screen and (min-width: 1400px) {
-  /* line 261, ../../sass/partials/core.scss */
+  /* line 262, ../../sass/partials/core.scss */
   .index-header dl {
     width: 83.17%;
   }
 }
 @media screen and (min-width: 1800px) {
-  /* line 261, ../../sass/partials/core.scss */
+  /* line 262, ../../sass/partials/core.scss */
   .index-header dl {
     width: 87.4%;
   }
 }
 
-/* line 296, ../../sass/partials/core.scss */
+/* line 298, ../../sass/partials/core.scss */
 blockquote {
   font-style: italic;
   font-size: 1.2em;
 }
-/* line 299, ../../sass/partials/core.scss */
+/* line 301, ../../sass/partials/core.scss */
 blockquote p {
   padding-bottom: .3em;
 }
-/* line 302, ../../sass/partials/core.scss */
+/* line 304, ../../sass/partials/core.scss */
 blockquote .attribution {
   font-size: .8em;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);

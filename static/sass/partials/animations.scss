@@ -76,3 +76,8 @@
   88%  { @include transform(translate3d(0,-1px,0)); }
   100% { @include transform(translate3d(0,0,0)); }
 }
+
+@include keyframes(fadeIn) {
+  0%   { @include opacity(0); }
+  100% { @include opacity(1); }
+}
