@@ -44,6 +44,19 @@ class Video(models.Model):
     def __unicode__(self):
         return self.title
 
+class Testimonial(models.Model):
+    text = models.TextField()
+    by_name = models.CharField(max_length=100)
+    by_position = models.CharField(max_length=100)
+    by_company = models.CharField(max_length=100)
+    rank = models.IntegerField()
+ 
+    class Meta:
+        ordering = ["rank"]
+
+    def __unicode__(self):
+        return self.by_name
+
 class Project(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
@@ -62,6 +75,7 @@ class Project(models.Model):
     secret = models.BooleanField(default=False)
     active = models.BooleanField(default=True)
     tagline = models.TextField(blank=True, null=True)
+    testimonials = models.ManyToManyField('Testimonial', blank=True, null=True)
     
     class Meta:
         ordering = ["rank"]
