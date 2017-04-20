@@ -360,11 +360,11 @@ main form input[type="text"], main form input[type="password"] {
 }
 
 /* line 244, ../../sass/partials/core.scss */
-main > header {
+.index-header {
   padding: 1.5em 0 1em;
 }
 /* line 247, ../../sass/partials/core.scss */
-main > header .kenny-roraback-photo {
+.index-header .kenny-roraback-photo {
   box-sizing: border-box;
   display: inline-block;
   vertical-align: middle;
@@ -377,60 +377,76 @@ main > header .kenny-roraback-photo {
   overflow: hidden;
 }
 /* line 256, ../../sass/partials/core.scss */
-main > header .kenny-roraback-photo img {
+.index-header .kenny-roraback-photo img {
   width: 100%;
   display: block;
 }
 /* line 261, ../../sass/partials/core.scss */
-main > header dl {
+.index-header dl {
   display: inline-block;
   vertical-align: middle;
 }
 /* line 264, ../../sass/partials/core.scss */
-main > header dl h1 {
+.index-header dl h1 {
   padding-top: 0;
 }
 /* line 267, ../../sass/partials/core.scss */
-main > header dl dd {
+.index-header dl dd {
   line-height: 1.3em;
   font-weight: 300;
   font-size: 1.1em;
 }
 /* line 271, ../../sass/partials/core.scss */
-main > header dl dd:before {
+.index-header dl dd:before {
   content: "– ";
 }
 /* line 275, ../../sass/partials/core.scss */
-main > header dl mark {
+.index-header dl mark {
   color: #cde7fd;
 }
 @media screen and (max-width: 767px) and (min-width: 501px) {
   /* line 261, ../../sass/partials/core.scss */
-  main > header dl {
+  .index-header dl {
     width: 66%;
   }
 }
 @media screen and (max-width: 1023px) and (min-width: 768px) {
   /* line 261, ../../sass/partials/core.scss */
-  main > header dl {
+  .index-header dl {
     width: 74.5%;
   }
 }
 @media screen and (min-width: 1024px) {
   /* line 261, ../../sass/partials/core.scss */
-  main > header dl {
+  .index-header dl {
     width: 79.75%;
   }
 }
 @media screen and (min-width: 1400px) {
   /* line 261, ../../sass/partials/core.scss */
-  main > header dl {
+  .index-header dl {
     width: 83.17%;
   }
 }
 @media screen and (min-width: 1800px) {
   /* line 261, ../../sass/partials/core.scss */
-  main > header dl {
+  .index-header dl {
     width: 87.4%;
   }
+}
+
+/* line 296, ../../sass/partials/core.scss */
+blockquote {
+  font-style: italic;
+  font-size: 1.2em;
+}
+/* line 299, ../../sass/partials/core.scss */
+blockquote p {
+  padding-bottom: .3em;
+}
+/* line 302, ../../sass/partials/core.scss */
+blockquote .attribution {
+  font-size: .8em;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
+  opacity: 0.75;
 }

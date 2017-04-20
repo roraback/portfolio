@@ -241,7 +241,7 @@ main {
     }
   }
 }
-main > header {
+.index-header {
   padding: 1.5em 0 1em;
 
   .kenny-roraback-photo {
@@ -291,5 +291,16 @@ main > header {
     @media #{$grandpaBear} {
       width: 87.4%;
     }
+  }
+}
+blockquote {
+  font-style: italic;
+  font-size: 1.2em;
+  p {
+    padding-bottom: .3em;
+  }
+  .attribution {
+    font-size: .8em;
+    @include opacity(.75);
   }
 }
