@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>https://{{ request.META.HTTP_HOST }}{% url 'home' %}</loc>
-		<lastmod>2017-04-20</lastmod>
+		<lastmod>2017-04-21</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>1.0</priority>
 	</url>
 	<url>
 		<loc>https://{{ request.META.HTTP_HOST }}{% url 'about' %}</loc>
-		<lastmod>2017-04-20</lastmod>
+		<lastmod>2017-04-21</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
 	<url>
 		<loc>https://{{ request.META.HTTP_HOST }}{% url 'contact' %}</loc>
-		<lastmod>2017-04-20</lastmod>
+		<lastmod>2017-04-21</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.6</priority>
 	</url>
@@ -22,7 +22,7 @@
 	{% if not project.login_required %}
 	<url>
 		<loc>https://{{ request.META.HTTP_HOST }}/projects/{{ project.slug }}</loc>
-		<lastmod>2017-04-20</lastmod>
+		<lastmod>2017-04-21</lastmod>
 		<changefreq>weekly</changefreq>
 		<priority>0.9</priority>
 	</url>
